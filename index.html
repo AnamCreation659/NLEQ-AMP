@@ -248,27 +248,23 @@ body {
 
 /*    product card design start*/
 .product-card-section {
-    display: flex
-;
-    flex-wrap: wrap;
-    gap: 15px;
-/*    background-color: skyblue;*/
-    /* padding: 10px; */
-    /* align-items: center; */
-    justify-content: center;
-    /* margin: 0 auto; */
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next row */
+    gap: 15px; /* Uniform gap between cards */
+    justify-content: space-between; /* Even horizontal spacing */
+    padding: 10px; /* Add padding for spacing around the container */
 }
-    .product-card {
-      width: 31%;
-      border-radius: 5px;
-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-      background-color: #fff;
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-    }
+.product-card {
+    width: calc(33.33% - 10px); /* 3 cards per row with equal spacing */
+    max-width: calc(33.33% - 10px); /* Prevent exceeding container width */
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
     .image-section {
       position: relative;
       width: 100%;
