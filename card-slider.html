@@ -1,0 +1,518 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AMP Product Card</title>
+  <link rel="canonical" href="self.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <style amp-custom>
+
+    
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ .container {
+      max-width: 768px;
+      padding: 0px 10px;
+      margin: 0 auto;
+    
+    }
+
+/*    product card design start*/
+.product-card-section{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: skyblue;
+  padding: 10px;
+/*  align-items: center;*/
+  justify-content: center;
+/*  margin: 0 auto;*/
+}
+    .product-card {
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .image-section {
+      position: relative;
+      width: 100%;
+      height: 130px;
+      flex-shrink: 0;
+    }
+    .image-section amp-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+   .featured-tag {
+    position: absolute;
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 5px 30px;
+    font-size: 12px;
+    font-weight: bold;
+    top: 50px;
+    left: 0px;
+    transform: rotate(-45deg);
+    transform-origin: left bottom;
+    z-index: 1;
+}
+    .sale-price-tag {
+      position: absolute;
+      background-color: #000;
+      border-top-left-radius: 5px;
+       border-bottom-left-radius: 5px;
+      color: #fff;
+      padding: 5px;
+      font-size: 12px;
+      bottom: 0px;
+      right: 0;
+    }
+    .sale-price-tag span{
+      font-weight: bold;
+      color: red;
+      margin-left: 5px;
+    }
+    .content-section {
+      padding: 5px;
+      flex-grow: 1;
+    }
+    .content-section p {
+      font-size: 12px;
+      color: #666;
+      margin: 5px 0;
+      font-weight: bold;
+    }
+    .content-section h2 {
+      font-size: 14px;
+      color: #333;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .details-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    .details-section a {
+      text-decoration: none;
+      color: #d32f2f;
+      border: 1px solid #d32f2f;
+      padding: 5px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+    }
+    .details-section a i {
+      margin-left: 10px;
+    }
+
+
+  @media (max-width: 475px) {
+    .image-section {
+/*        position: relative;*/
+        width: 120px;
+        height: 120px;
+/*        flex-shrink: 0;*/
+    }
+.product-card {
+  width: 100%;
+   
+     flex-direction: row; 
+}
+.content-section {
+  overflow: hidden;
+  padding: 10px;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.details-section {
+
+     margin-bottom: 0px; 
+}
+
+.content-section p {
+   
+     margin: 0px ; 
+    
+}
+
+
+}
+
+
+
+    /*    product card design end*/
+  </style>
+</head>
+<body>
+  <!-- product card design start -->
+  <div class="container">
+  <div class="product-card-section">
+  <div class="product-card">
+    <div class="image-section">
+      <div class="featured-tag">Featured</div>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="image-section">
+      <div class="featured-tag">Featured</div>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="image-section">
+      <div class="featured-tag">Featured</div>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="image-section">
+      <div class="featured-tag">Featured</div>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="image-section">
+      <div class="featured-tag">Featured</div>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="image-section">
+      <div class="featured-tag">Featured</div>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="image-section">
+      <div class="featured-tag">Featured</div>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="image-section">
+      <div class="featured-tag">Featured</div>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="image-section">
+      <div class="featured-tag">Featured</div>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="image-section">
+      <div class="featured-tag">Featured</div>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+   <div class="product-card">
+    <div class="image-section">
+      <div class="featured-tag">Featured</div>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="image-section">
+      <div class="featured-tag">Featured</div>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+   <!-- product card design end -->
+</body>
+</html>

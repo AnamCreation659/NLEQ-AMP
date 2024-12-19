@@ -1,0 +1,309 @@
+<!doctype html>
+<html amp>
+<head>
+  <meta charset="utf-8">
+  <title>Inventory</title>
+  <link rel="canonical" href="self.html">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+  <style amp-custom>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 90%;
+      max-width: 400px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+    }
+    .header {
+      color: #007BFF;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    amp-accordion section {
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .category-header {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .category-header i {
+      margin-right: 10px;
+      transition: transform 0.3s;
+    }
+    .category-header:hover {
+      background-color: #0056b3;
+    }
+    .category-header[aria-expanded="true"] {
+      background-color: #0056b3;
+      color: #ffffff;
+    }
+    .category-header[aria-expanded="true"] i {
+      transform: rotate(90deg);
+    }
+    .subcategory {
+      padding: 10px 20px;
+      display: block;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+    section[expanded] .subcategory {
+      max-height: 300px; /* Adjust based on your content */
+      opacity: 1;
+    }
+    .subcategory-item {
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: #555;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .subcategory-item:hover {
+      background-color: #eef;
+      color: #007BFF;
+    }
+    .subcategory-item i {
+      margin-right: 10px;
+      color: #007BFF;
+    }
+    .subcategory-item span {
+      margin-left: auto;
+      font-size: 12px;
+      color: #888;
+    }
+    .image-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .image-container img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .view-details {
+      display: inline-block;
+      background-color: #007BFF;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: -40px;
+      position: relative;
+      z-index: 1;
+      font-size: 14px;
+    }
+    .view-details:hover {
+      background-color: #0056b3;
+    }
+
+    /* Media Query for Mobile View */
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+      .header {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      .category-header {
+        font-size: 14px;
+        padding: 8px;
+      }
+      .subcategory-item {
+        font-size: 12px;
+        padding: 6px 0;
+      }
+      .view-details {
+        padding: 8px 15px;
+        font-size: 12px;
+      }
+    }
+  </style>
+
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Inventory</div>
+    <amp-accordion expand-single-section>
+      <section>
+        <h2 class="category-header">
+          <i class="fas fa-chevron-right"></i> Boom Lifts
+        </h2>
+        <div class="subcategory">
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-up"></i> Articulating Boom Lift
+            <span>(211)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-right"></i> Straight Boom Lift
+            <span>(249)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-down"></i> Towable Boom Lift
+            <span>(34)</span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="category-header">
+          <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
+        </h2>
+        <div class="subcategory">
+          <div class="subcategory-item">
+            <i class="fas fa-arrows-alt-v"></i> Scissor Lift
+            <span>(150)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrows-alt-h"></i> Mast Lift
+            <span>(75)</span>
+          </div>
+        </div>
+      </section>
+       <section>
+        <h2 class="category-header">
+          <i class="fas fa-chevron-right"></i> Boom Lifts
+        </h2>
+        <div class="subcategory">
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-up"></i> Articulating Boom Lift
+            <span>(211)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-right"></i> Straight Boom Lift
+            <span>(249)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-down"></i> Towable Boom Lift
+            <span>(34)</span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="category-header">
+          <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
+        </h2>
+        <div class="subcategory">
+          <div class="subcategory-item">
+            <i class="fas fa-arrows-alt-v"></i> Scissor Lift
+            <span>(150)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrows-alt-h"></i> Mast Lift
+            <span>(75)</span>
+          </div>
+        </div>
+      </section>
+       <section>
+        <h2 class="category-header">
+          <i class="fas fa-chevron-right"></i> Boom Lifts
+        </h2>
+        <div class="subcategory">
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-up"></i> Articulating Boom Lift
+            <span>(211)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-right"></i> Straight Boom Lift
+            <span>(249)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-down"></i> Towable Boom Lift
+            <span>(34)</span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="category-header">
+          <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
+        </h2>
+        <div class="subcategory">
+          <div class="subcategory-item">
+            <i class="fas fa-arrows-alt-v"></i> Scissor Lift
+            <span>(150)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrows-alt-h"></i> Mast Lift
+            <span>(75)</span>
+          </div>
+        </div>
+      </section>
+       <section>
+        <h2 class="category-header">
+          <i class="fas fa-chevron-right"></i> Boom Lifts
+        </h2>
+        <div class="subcategory">
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-up"></i> Articulating Boom Lift
+            <span>(211)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-right"></i> Straight Boom Lift
+            <span>(249)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-down"></i> Towable Boom Lift
+            <span>(34)</span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="category-header">
+          <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
+        </h2>
+        <div class="subcategory">
+          <div class="subcategory-item">
+            <i class="fas fa-arrows-alt-v"></i> Scissor Lift
+            <span>(150)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrows-alt-h"></i> Mast Lift
+            <span>(75)</span>
+          </div>
+        </div>
+      </section>
+    </amp-accordion>
+    <div class="image-container">
+      <amp-img 
+        alt="Boom lifts in a yard"
+        src="https://storage.googleapis.com/a1aa/image/2YyBSkOZxOpVLREemffRfe4o8xHtTLhnuuDC1Dc9FncmTfgeJA.jpg" 
+        width="300" height="200"
+        layout="responsive">
+      </amp-img>
+      <a class="view-details" href="#">View Details <i class="fas fa-arrow-right"></i></a>
+    </div>
+     <div class="image-container">
+      <amp-img 
+        alt="Boom lifts in a yard"
+        src="https://storage.googleapis.com/a1aa/image/2YyBSkOZxOpVLREemffRfe4o8xHtTLhnuuDC1Dc9FncmTfgeJA.jpg" 
+        width="300" height="200"
+        layout="responsive">
+      </amp-img>
+      <a class="view-details" href="#">View Details <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</body>
+</html>
