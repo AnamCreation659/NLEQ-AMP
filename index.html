@@ -1,1653 +1,2007 @@
 <!DOCTYPE html>
 <html ⚡>
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-      <link rel="canonical" href="https://example.com"/>
-      <script async src="https://cdn.ampproject.org/v0.js"></script>
-      <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-      <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-      <title>National Lift Equipment</title>
-      <style amp-custom>
-         *{
-         padding: 0;
-         margin: 0;
-         box-sizing: border-box;
-         }
-         .container {
-         max-width: 768px;
-         padding: 0px 10px;
-         margin: 0 auto;
-         }
-         /*    product card design start*/
-         .product-card-section {
-         display: flex
-         ;
-         flex-wrap: wrap;
-         gap: 15px;
-         background-color: skyblue;
-         padding: 10px;
-         /* align-items: center; */
-         justify-content: center;
-         /* margin: 0 auto; */
-         justify-content: space-between;
-         }
-         .product-card {
-         width: 31%;
-         border-radius: 10px;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-         background-color: #fff;
-         overflow: hidden;
-         position: relative;
-         display: flex;
-         flex-direction: column;
-         }
-         .image-section {
-         position: relative;
-         width: 100%;
-         height: 130px;
-         flex-shrink: 0;
-         }
-         .image-section amp-img {
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-         }
-         .featured-tag {
-         position: absolute;
-         background-color: #d32f2f;
-         color: #fff;
-         padding: 5px 30px;
-         font-size: 12px;
-         font-weight: bold;
-         top: 50px;
-         left: 0px;
-         transform: rotate(-45deg);
-         transform-origin: left bottom;
-         z-index: 1;
-         }
-         .sale-price-tag {
-         position: absolute;
-         background-color: #000;
-         border-top-left-radius: 5px;
-         border-bottom-left-radius: 5px;
-         color: #fff;
-         padding: 5px;
-         font-size: 12px;
-         bottom: 0px;
-         right: 0;
-         }
-         .sale-price-tag span{
-         font-weight: bold;
-         color: red;
-         margin-left: 5px;
-         }
-         .content-section {
-         padding: 5px;
-         flex-grow: 1;
-         }
-         .content-section p {
-         font-size: 12px;
-         color: #666;
-         margin: 5px 0;
-         font-weight: bold;
-         }
-         .content-section h2 {
-         font-size: 14px;
-         color: #333;
-         white-space: nowrap;
-         overflow: hidden;
-         text-overflow: ellipsis;
-         }
-         .details-section {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         margin-bottom: 5px;
-         }
-         .details-section a {
-         text-decoration: none;
-         color: #d32f2f;
-         border: 1px solid #d32f2f;
-         padding: 5px;
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+     <link rel="canonical" href="https://example.com"/>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>National Lift Equipment</title>
+ 
+    <style amp-custom>
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+  font-family: "Poppins";
+ font-weight: 400;
+ 
+}
+
+@font-face {
+  font-family: "Poppins";
+    src: url("./fontFamily/Poppins-Black.ttf") format("truetype");
+  font-weight: 900; /* Black */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fontFamily/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fontFamily/Poppins-ExtraBold.ttf") format("truetype");
+  font-weight: 800; /* Extra Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fontFamily/Poppins-ExtraLight.ttf") format("truetype");
+  font-weight: 200; /* Extra Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fontFamily/Poppins-Light.ttf") format("truetype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fontFamily/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fontFamily/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fontFamily/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600; /* Semi Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fontFamily/Poppins-Thin.ttf") format("truetype");
+  font-weight: 100; /* Thin */
+  font-style: normal;
+}
+
+ .container {
+      max-width: 768px;
+      padding: 0px 10px;
+      margin: 0 auto;
+    
+    }
+
+
+
+
+
+ /* Header Styles */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 40, 104, 0.7); /* Corrected background with opacity */
+    padding: 10px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    max-width: 768px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+   .header-left {
+        display: flex;
+        align-items: center;
+    }
+    
+    .header-menu-icon {
+        margin-right: 20px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+    }
+     .header-logo{
+        display: flex;
+        
+    }
+    .header-logo amp-img {
+        display: inline-block;
+        max-width: 40px;
+    }
+     .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .header-call-to-action {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(97deg, #CD172B 0%, #64000B 100%);
+    font-weight: 600;
+  }
+  .header-call-to-action i {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+    .background {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        background-image: url('https://nleq.com/images/bgDayImg.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+  .search-container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    max-width: 500px;
+}
+    .search-box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: solid #CD172B 3px;
+}
+   .search-box i {
+    color: #CD172B;
+    margin-right: 10px;
+    font-size: 16px;
+}
+.search-box input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    font-family: "Poppins";
+ font-weight: 400;
+}
+    .search-box input::placeholder {
+        color: black;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-card-section{
+    margin-top: 20px;
+    background-color: #e5e5e5;
+    border-radius: 5px;
+
+        padding: 10px;
+}
+
+
+
+
+
+
+
+
+  .main-heading {
+            text-align: center;
+          font-size: 18px;
+          font-weight: 700;
+        }
+        .main-heading span {
+            color: #CD172B;
+        }
+
+
+
+/*    product card design start*/
+.product-card-section {
+    display: flex
+;
+    flex-wrap: wrap;
+    gap: 15px;
+/*    background-color: skyblue;*/
+    padding: 10px;
+    /* align-items: center; */
+    justify-content: center;
+    /* margin: 0 auto; */
+    justify-content: space-between;
+}
+    .product-card {
+      width: 31%;
+      border-radius: 5px;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      background-color: #fff;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .image-section {
+      position: relative;
+      width: 100%;
+      height: 130px;
+      flex-shrink: 0;
+    }
+    .image-section amp-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+.featured-tag {
+    position: absolute;
+    background-color: #CD172B;
+    color: #fff;
+    padding: 2px 20px;
+    font-size: 10px;
+    top: 40px;
+    left: 0px;
+    transform: rotate(-45deg);
+    transform-origin: left bottom;
+    z-index: 1;
+}
+    .sale-price-tag {
+      position: absolute;
+      background-color: #000;
+      border-top-left-radius: 5px;
+       border-bottom-left-radius: 5px;
+      color: #fff;
+      padding: 3px;
+      font-size: 12px;
+      bottom: 0px;
+      right: 0;
+    }
+    .sale-price-tag span{
+      font-weight: 700;
+      color: #CD172B;
+      margin-left: 5px;
+    }
+    .content-section {
+      padding: 5px;
+      flex-grow: 1;
+    }
+    .content-section p {
+      font-size: 12px;
+      color: #666;
+      margin: 2px 0;
+      font-weight: 600;
+    }
+     .content-section p span{
+     color: #CD172B;
+    }
+    .content-section h2 {
+      font-size: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .details-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+/*    margin-bottom: 5px;*/
+    margin: 4px 0px;
+}
+    .details-section a {
+      text-decoration: none;
+      color: #d32f2f;
+      border: 1px solid #d32f2f;
+      padding: 3px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+/*        font-weight: 600;*/
+    }
+    .details-section a i {
+      margin-left: 5px;
+    }
+
+.i-amphtml-layout-size-defined .i-amphtml-fill-content {
+   
+    object-fit: cover;
+}
+
+
+
+
+      
+
+    /* Sidebar styles */
+        amp-sidebar {
+            background-color: #2c3e50;
+            width: 255px;
+            height: 100%;
+             padding: 10px 20px;
+        }
+        .sidebar-menu {
+            margin-top: 20px;
+            list-style: none; 
+            padding: 0;
+        }
+
+        .sidebar-menu li {
+             border-radius: 5px;
+            border-bottom: 1px solid #444;
+        }
+
+        .sidebar-menu li:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-menu li a {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+
+              .sidebar-menu li:hover a {
+                 background-color: white;
+            border-radius: 5px;
+            background-color: white;
+            border-radius: 5px;
+            color: black;
+        }
+
+
+            .sidebar-menu .icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    font-size: 24px;
+    text-align: center;
+    line-height: 24px;
+    vertical-align: middle;
+     margin-right: 15px;
+}
+.inventory-items {
+
+    border: 0px;
+    background: none;
+    padding: 10px;
+    font-size: 22px;
+     border-radius: 5px;
+    color: white;
+    line-height: 0;
+}
+               .inventory-items:hover {
+            background-color: white;
+            border-radius: 5px;
+              color: black;
+        }
+           .inventory-items:hover span {
+
+            color: black;
+        }
+
+
+
+    .sidebar-logo{
+          display: flex;
+          justify-content: space-between;
+            align-items: center;
+
+    }
+  .category-header {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    font-weight: normal;
+}
+    .category-header i {
+        color: #CD172B;
+      margin-right: 10px;
+      transition: transform 0.3s;
+    }
+    .i-amphtml-accordion-header {
+     border: 0px; 
+}
+    .category-header:hover {
+      background-color: #0056b3;
+      color: white;
+    }
+    .category-header:hover i{
+      color: white;
+    }
+    .category-header[aria-expanded="true"] {
+      background-color: #0056b3;
+      color: #ffffff;
+    }
+    .category-header[aria-expanded="true"] i {
+      transform: rotate(90deg);
+      color: white;
+    }
+    .subcategory {
+        margin-top: 5px;
+        background: white;
+      padding: 5px !important;
+      display: block;
+      max-height: 0;
+      opacity: 0;
+      border-radius: 5px;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+    section[expanded] .subcategory {
+      max-height: 300px;
+      opacity: 1;
+    }
+    .subcategory-item {
          border-radius: 5px;
-         display: flex;
-         align-items: center;
-         font-size: 14px;
-         }
-         .details-section a i {
-         margin-left: 10px;
-         }
-         .i-amphtml-layout-size-defined .i-amphtml-fill-content {
-         object-fit: cover;
-         }
-         /* Header Styles */
-         .header-container {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         background-color: rgba(0, 0, 0, 0.7);
-         padding: 10px;
-         color: white;
-         position: fixed;
-         width: 100%;
-         max-width: 768px;
-         left: 0;
-         right: 0;
-         margin: 0 auto;
-         z-index: 1;
-         }
-         .header-left {
-         display: flex;
-         align-items: center;
-         }
-         .header-menu-icon {
-         margin-right: 20px;
-         background: none;
-         border: none;
-         font-size: 24px;
-         color: white;
-         cursor: pointer;
-         }
-         .header-logo amp-img {
-         display: inline-block;
-         max-width: 50px;
-         }
-         .header-right {
-         font-size: 16px;
-         }
-         .header-call-to-action {
-         background-color: #c0392b;
-         color: white;
-         padding: 10px 20px;
-         border-radius: 5px;
-         text-decoration: none;
-         }
-         /* Background Styles */
-         .background {
-         position: relative;
-         width: 100%;
-         height: 250px;
-         background-image: url('https://nleq.com/images/bgDayImg.webp');
-         background-size: cover;
-         background-position: center;
-         background-repeat: no-repeat;
-         }
-         /* Search Container Styles */
-         .search-container {
-         position: absolute;
-         top: 60%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-         width: 95%;
-         max-width: 450px;
-         /* padding: 10px; */
-         }
-         .search-box {
-         display: flex
-         ;
-         align-items: center;
-         background-color: rgba(255, 255, 255, 0.9);
-         border-radius: 50px;
-         padding: 12px;
-         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-         }
-         .search-box i {
-         color: #9b9b9b;
-         margin-right: 5px;
-         font-size: 16px;
-         }
-         .search-box input {
-         border: none;
-         outline: none;
-         flex: 1;
-         font-size: 14px;
-         color: #333;
-         background: transparent;
-         }
-         .search-box input::placeholder {
-         color: #9b9b9b;
-         }
-         /* Sidebar styles */
-         amp-sidebar {
-         background-color: #2c3e50;
-         width: 255px;
-         height: 100%;
-         padding: 10px 20px;
-         }
-         .sidebar-menu {
-         margin-top: 20px;
-         list-style: none; 
-         padding: 0;
-         }
-         .sidebar-menu li {
-         border-radius: 5px;
-         border-bottom: 1px solid #444;
-         }
-         .sidebar-menu li:last-child {
-         border-bottom: none;
-         }
-         .sidebar-menu li a {
-         display: flex;
-         align-items: center;
-         padding: 10px;
-         font-size: 20px;
-         text-decoration: none;
-         color: white;
-         }
-         .sidebar-menu li:hover a {
-         background-color: white;
-         border-radius: 5px;
-         background-color: white;
-         border-radius: 5px;
-         color: black;
-         }
-         .sidebar-menu .icon {
-         width: 24px;
-         height: 24px;
-         display: inline-block;
-         font-size: 24px;
-         text-align: center;
-         line-height: 24px;
-         vertical-align: middle;
-         margin-right: 15px;
-         }
-         .inventory-items {
-         border: 0px;
-         background: none;
-         padding: 10px;
-         font-size: 22px;
-         border-radius: 5px;
-         color: white;
-         line-height: 0;
-         }
-         .inventory-items:hover {
-         background-color: white;
-         border-radius: 5px;
-         color: black;
-         }
-         .inventory-items:hover span {
-         color: black;
-         }
-         .sidebar-logo{
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         }
-         .category-header {
-         margin-top: 5px;
-         display: flex;
-         align-items: center;
-         cursor: pointer;
-         padding: 10px;
-         font-size: 14px;
-         background-color: white;
-         color: black;
-         transition: background-color 0.3s, color 0.3s;
-         border-radius: 5px;
-         font-weight: normal;
-         }
-         .category-header i {
-         color: #CD172B;
-         margin-right: 10px;
-         transition: transform 0.3s;
-         }
-         .i-amphtml-accordion-header {
-         border: 0px; 
-         }
-         .category-header:hover {
-         background-color: #0056b3;
-         color: white;
-         }
-         .category-header:hover i{
-         color: white;
-         }
-         .category-header[aria-expanded="true"] {
-         background-color: #0056b3;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: #555;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .subcategory-item:hover {
+      background-color: #eef;
+      color: #007BFF;
+    }
+    .subcategory-item i {
+      margin-right: 10px;
+      color: #007BFF;
+    }
+    .subcategory-item span {
+      margin-left: auto;
+      font-size: 12px;
+      color: #888;
+    }
+    .image-container {
+        position: relative;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .image-container img {
+      width: 100%;
+      border-radius: 8px;
+    }
+   .view-details {
+     display: inline-block !important; 
+    background-color: #CD172B !important;
+    color: #ffffff !important;
+    border-radius: 5px;
+    text-decoration: none;
+    z-index: 1;
+    font-size: 14px !important;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+    .view-details:hover {
+      background-color: #0056b3;
+    }
+.view-details i{
+      margin-left: 8px;
+    }
+
+   
+      
+.i-amphtml-accordion-content{
+    padding:  10px;
+}
+
+.inventory-items[aria-expanded="true"] {
+    background-color: #0056b3;
+    background-opacity: 0.5;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* About-Us section start*/
+.about-us-container{
+    margin-top: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+   .about-us-container h2 {
+          font-size: 20px;
+      }
+       .about-us-container h2 span {
+          color: #CD172B;
+      }
+
+.about-us-container h4 {
+    line-height: 1;
+    margin-top: 10px;
+}
+        .about-us-container p {
+         
+            font-size: 14px;
+            line-height: 1.4;
+            margin-top: 8px;
+        }
+        .about-us-read-more{
+            display: flex;
+            justify-content: end;
+        }
+        .about-us-read-btn {
+            margin-top: 10px;
+           background-color: #CD172B;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+/*    box-shadow: 0 5px #c0392b;*/
+    cursor: pointer;
+        }
+        .about-us-read-more i {
+            margin-left: 8px;
+        }
+/* About-Us section end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Unmatched Services section start*/
+.unmatched-services {
+    margin-top: 20px;
+    background-color: black;
+    border-radius: 5px 5px 0 0; 
+    padding: 20px 10px;
+}
+
+.unmatched-services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+        .unmatched-services__title {
+            font-size: 20px;
+            color: #ffffff;
+        }
+        .unmatched-services__title span {
+/*            font-size: 24px;*/
+            color: #CD172B;
+        }
+        .unmatched-services__button {
+         background-color: #CD172B;
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 5px;
+/*            box-shadow: 0 5px #c0392b;*/
+            cursor: pointer;
+        }
+.unmatched-services__button i {
+    margin-left: 8px;
+}
+.services-card-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 27px; */
+    justify-content: space-between;
+}     
+
+
+
+ .service-card {
+            width: 49%;
+    background-color: #1e1e1e;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 35px;
+    position: relative;
+    border: 2px solid #CD172B;
+
+}
+       .service-card__icon {
+        color: #ffffff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    transform: translate(0%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    border: 2px solid #CD172B;
+    box-sizing: border-box;
+}
+        .service-card__title {
+            color: #ffffff;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .service-card__description {
+            color: #ffffff;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Unmatched Services section end*/
+
+
+
+
+/* equipment-progress section start*/
+
+.equipment-header {
+        position: relative;
+      }
+      .equipment-header .header-overlay {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 51, 102, 0.6);
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+      }
+      .equipment-header amp-img {
+        width: 100%;
+        height: auto;
+      }
+      .equipment-header .header-overlay div {
+        text-align: center;
+      }
+      .equipment-header .header-overlay div span {
+        color: #ffffff;
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+      }
+       .equipment-header .header-overlay div p {
+        color: #ffffff;
+        display: block;
+        font-size: 14px;
+/*        font-weight: bold;*/
+      }
+      .equipment-content {
+
+ border-radius: 0px 0px 5px 5px; 
+        background-color: black;
+        padding: 20px 10px;
+/*        text-align: center;*/
+      }
+      .equipment-content-button {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+      }
+      .equipment-content-button h2 {
+          font-size: 20px;
+        color: #ffffff;
+      }
+      .equipment-content-button h2 span {
+/*          font-size: 20px;*/
+          color: #CD172B;
+      }
+      .search-button {
+        background-color: #CD172B;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+/*    box-shadow: 0 5px #c0392b;*/
+    cursor: pointer;
+      }
+
+      .search-button i {
+       margin-left: 5px;
+      }
+      .progress-section {
+        margin-top: 15px;
+      }
+      .progress-section span {
          color: #ffffff;
-         }
-         .category-header[aria-expanded="true"] i {
-         transform: rotate(90deg);
-         color: white;
-         }
-         .subcategory {
-         margin-top: 5px;
-         background: white;
-         padding: 5px !important;
-         display: block;
-         max-height: 0;
-         opacity: 0;
-         border-radius: 5px;
-         transition: max-height 0.4s ease, opacity 0.4s ease;
-         }
-         section[expanded] .subcategory {
-         max-height: 300px;
-         opacity: 1;
-         }
-         .subcategory-item {
-         border-radius: 5px;
-         padding: 8px;
-         display: flex;
-         align-items: center;
-         font-size: 14px;
-         color: #555;
-         transition: background-color 0.3s, color 0.3s;
-         }
-         .subcategory-item:hover {
-         background-color: #eef;
-         color: #007BFF;
-         }
-         .subcategory-item i {
-         margin-right: 10px;
-         color: #007BFF;
-         }
-         .subcategory-item span {
-         margin-left: auto;
-         font-size: 12px;
-         color: #888;
-         }
-         .image-container {
-         position: relative;
-         margin-top: 10px;
-         text-align: center;
-         }
-         .image-container img {
-         width: 100%;
-         border-radius: 8px;
-         }
-         .view-details {
-         display: inline-block !important; 
-         background-color: #CD172B !important;
-         color: #ffffff !important;
-         border-radius: 5px;
-         text-decoration: none;
-         z-index: 1;
-         font-size: 14px !important;
-         position: absolute;
-         bottom: 0;
-         left: 0;
-         right: 0;
-         }
-         .view-details:hover {
-         background-color: #0056b3;
-         }
-         .view-details i{
-         margin-left: 8px;
-         }
-         .i-amphtml-accordion-content{
-         padding:  10px;
-         }
-         .inventory-items[aria-expanded="true"] {
-         background-color: #0056b3;
-         background-opacity: 0.5;
-         color: #ffffff;
-         }
-         /* About-Us section start*/
-         .about-us-container h2 {
-         font-size: 20px;
-         }
-         .about-us-container h2 span {
-         color: #ff4d4d;
-         }
-         .about-us-container h4 {
-         margin-top: 10px;
-         }
-         .about-us-container p {
-         font-size: 16px;
-         line-height: 1.4;
-         margin-top: 10px;
-         }
-         .about-us-read-more {
-         margin-top: 10px;
-         background-color: #e74c3c;
-         border: none;
-         color: white;
-         padding: 10px;
-         text-align: center;
-         text-decoration: none;
-         display: inline-block;
-         font-size: 16px;
-         font-weight: bold;
-         border-radius: 5px;
-         box-shadow: 0 5px #c0392b;
-         cursor: pointer;
-         }
-         .about-us-read-more i {
-         margin-left: 8px;
-         }
-         /* About-Us section end*/
-         /* Unmatched Services section start*/
-         .unmatched-services {
-         margin-top: 20px;
-         background-color: black;
-         border-radius: 5px 5px 0 0; /* Remove bottom border-radius */
-         padding: 20px 10px;
-         }
-         .unmatched-services-header {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         }
-         .unmatched-services__title {
-         font-size: 20px;
-         color: #ffffff;
-         }
-         .unmatched-services__title span {
-         /*            font-size: 24px;*/
-         color: #ff4d4d;
-         }
-         .unmatched-services__button {
-         background-color: #e74c3c;
-         border: none;
-         color: white;
-         padding: 10px;
-         text-align: center;
-         text-decoration: none;
-         display: inline-block;
-         font-size: 16px;
-         font-weight: bold;
-         border-radius: 5px;
-         box-shadow: 0 5px #c0392b;
-         cursor: pointer;
-         }
-         .unmatched-services__button i {
-         margin-left: 8px;
-         }
-         .services-card-container {
-         display: flex;
-         flex-wrap: wrap;
-         /* gap: 27px; */
-         justify-content: space-between;
-         }      .service-card {
-         width: 48%;
-         background-color: #1e1e1e;
-         padding: 10px;
-         border-radius: 10px;
-         margin-top: 40px;
-         position: relative;
-         border: 2px solid #ff4d4d;
-         }
-         .service-card__icon {
-         color: #ffffff;
-         font-size: 20px;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         position: absolute;
-         top: 0;
-         transform: translate(0%, -50%);
-         width: 50px;
-         height: 50px;
-         background-color: #1e1e1e;
-         border-radius: 50%;
-         border: 2px solid #ff4d4d;
-         box-sizing: border-box;
-         }
-         .service-card__title {
-         color: #ffffff;
-         font-size: 16px;
-         margin-top: 20px;
-         }
-         .service-card__description {
-         color: #ffffff;
-         font-size: 14px;
-         line-height: 1.4;
-         margin-top: 10px;
-         }
-         /* Unmatched Services section end*/
-         /* equipment-progress section start*/
-         .equipment-header {
-         position: relative;
-         }
-         .equipment-header .header-overlay {
-         position: absolute;
-         bottom: 0;
-         width: 100%;
-         background-color: rgba(0, 51, 102, 0.6);
-         color: #fff;
-         display: flex;
-         justify-content: space-between;
-         padding: 20px;
-         }
-         .equipment-header amp-img {
-         width: 100%;
-         height: auto;
-         }
-         .equipment-header .header-overlay div {
-         text-align: center;
-         }
-         .equipment-header .header-overlay div span {
-         color: #ffffff;
-         display: block;
-         font-size: 18px;
-         font-weight: bold;
-         }
-         .equipment-header .header-overlay div p {
-         color: #ffffff;
-         display: block;
-         font-size: 14px;
-         /*        font-weight: bold;*/
-         }
-         .equipment-content {
-         background-color: black;
-         padding: 20px 10px;
-         /*        text-align: center;*/
-         }
-         .equipment-content-button {
-         display: flex;
-         align-items: center;
-         justify-content: space-between;
-         }
-         .equipment-content-button h2 {
-         font-size: 20px;
-         color: #ffffff;
-         }
-         .equipment-content-button h2 span {
-         /*          font-size: 20px;*/
-         color: #ff4d4d;
-         }
-         .search-button {
-         background-color: #e74c3c;
-         border: none;
-         color: white;
-         padding: 10px;
-         text-align: center;
-         text-decoration: none;
-         display: inline-block;
-         font-size: 16px;
-         font-weight: bold;
-         border-radius: 5px;
-         box-shadow: 0 5px #c0392b;
-         cursor: pointer;
-         }
-         .search-button i {
-         margin-left: 8px;
-         }
-         .progress-section {
-         margin-top: 15px;
-         }
-         .progress-section span {
-         color: #ffffff;
-         display: block;
-         text-align: left;
-         margin-bottom: 5px;
-         }
-         .progress-bar {
-         width: 100%;
-         background-color: #e0e0e0;
-         border-radius: 5px;
-         overflow: hidden;
-         }
-         .progress-bar div {
-         height: 6px;
-         border-radius: 5px;
-         }
-         .progress-section-percentage{
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         }
-         .buy-bar {
-         width: 90%;
-         background-color: #d32f2f;
-         }
-         .sell-bar {
-         width: 80%;
-         background-color: #d32f2f;
-         }
-         /* equipment-progress section end*/
-         .main-card-section{
-         margin-top: 20px;
-         background-color: #e5e5e5;
-         border-radius: 5px;
-         padding: 20px;
-         }
-         /*card-section start*/
-         .card-content-expand{
-         /*    margin-top: 20px;*/
-         text-align: center;
-         }
-         .card-content-expand h2 {
-         font-size: 16px;
-         padding-bottom: 20px;
-         border-bottom: 2px solid #d1d5db;
-         }
-         .card-box {
-         margin-top: 20px;
-         justify-content: center;
-         align-items: center;
-         display: flex
-         ;
-         /* flex-direction: column; */
-         gap: 15px;
-         flex-wrap: wrap;
-         }
-         .card {
-         text-align: center;
-         background-color: #fff;
-         border-radius: 10px;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-         padding: 25px 0px;
-         width: 190px;
-         transition: transform 0.3s, background-color 0.3s;
-         }
-         .card:hover {
-         background-color: #d4d4d4;
-         transform: scale(1.08);
-         }
-         .card h3 {
-         font-size: 16px;
-         margin: 0;
-         }
-         .card h4 {
-         font-size: 14px;
-         margin: 5px 0 0 0;
-         }
-         /*card-section end*/
-         footer {
-         background-color: black;
-         max-width: 768px;
-         min-width: 320px;
-         margin: 60px auto 0px auto;
-         }
-         /*subscribe-section start*/
-         .subscribe-section {
-         width: 90%;
-         background-color: #0a2a66;
-         padding: 20px;
-         position: relative;
-         top: -35px;
-         left: 0;
-         right: 0;
-         margin: 0 auto;
-         }
-         .subscribe-section h2 {
-         font-size: 20px;
-         font-weight: bold;
-         color: #ffffff;
-         }
-         .subscribe-section p {
-         font-size: 16px;
-         color: #ffffff;
-         margin: 15px 0px;
-         }
-         .subscribe-button {
-         display: inline-block;
-         background-color: #3b5998;
-         color: white;
-         padding: 10px 20px;
-         border-radius: 5px;
-         text-decoration: none;
-         font-size: 16px;
-         font-weight: bold;
-         }
-         .subscribe-button i {
-         margin-right: 10px;
-         }
-         /*subscribe-section start*/
-         .footer-container {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         padding: 0px 20px;
-         }
-         .footer-header {
-         display: flex;
-         justify-content: space-between;
-         width: 100%;
-         align-items: center;
-         }
-         .footer-header img {
-         height: 50px;
-         }
-         .footer-header .social {
-         display: flex;
-         align-items: center;
-         }
-         .footer-header .social span {
-         color: #ffffff;
-         font-size: 14px;
-         }
-         .footer-header .social a {
-         color: #ffffff;
-         margin-left: 10px;
-         text-decoration: none;
-         font-size: 14px;
-         }
-         .footer-content {
-         width: 100%;
-         display: flex;
-         flex-wrap: wrap;
-         justify-content: space-between;
-         }
-         .footer-content .column h3 {
-         margin: 10px 0px;
-         color: #ffffff;
-         font-size: 16px;
-         }
-         .footer-content .column ul {
-         list-style: none;
-         padding: 0;
-         }
-         .footer-content .column ul li {
-         margin-bottom: 10px;
-         }
-         .footer-content .column ul li a {
-         font-size: 14px;
-         color: #ffffff;
-         text-decoration: none;
-         }
-         .latest-offers {
-         display: flex;
-         flex-wrap: wrap;
-         gap: 10px;
-         margin-top: 10px;
-         }
-         .latest-offer-column{
-         width: 100% !important;
-         }
-         .latest-offers amp-img {
-         width: 100px;
-         height: 100px;
-         object-fit: cover;
-         }
-         .footer {
-         text-align: center;
-         margin-top: 20px;
-         padding: 10px 0;
-         border-top: 1px solid #ffffff;
-         width: 100%;
-         }
-         .footer p {
-         color: #ffffff;
-         font-size: 14px;
-         margin: 5px 0;
-         }
-         .footer p a {
-         color: #ffffff;
-         text-decoration: none;
-         }
-         @media (max-width: 640px) {
-         .unmatched-services-header {
-         align-items: start;
-         flex-direction: column;
-         }
-         .unmatched-services__button {
-         margin-top: 10px;
-         font-size: 14px;
-         }
-         .equipment-header amp-img {
-         height: 250px !important;
-         }
-         .equipment-header .header-overlay {
-         padding: 10px;
-         }
-         .card {
-         width: 240px;
-         }
-         .equipment-content-button {
-         align-items: start;
-         flex-direction: column;
-         }
-         .search-button {
-         margin-top: 10px; 
-         }
-         .equipment-header .header-overlay div p {
-         font-size: 12px;
-         }
-         .services-card-container {
-         flex-direction: column;
-         }  
-         .service-card {
-         width: 100%;
-         }
-         .footer-content .column {
-         width: 50%;
-         }
-         .latest-offers-column{
-         width: 100% !important;
-         }
-         .card {
-         width: 200px;
-         }
-         }
-         @media (max-width: 575px) {
-         .main-card-section {
-         padding: 10px;
-         }
-         .product-card-section {
-         gap: 10px;
-         }
-         .product-card {
-         width: 48%;
-         }
-         .image-section {
-         height: 115px;
-         }
-         }
-         @media (max-width: 340px) {
-         .product-card-section {
-         gap: 15px;
-         }
-         .image-section {
-         width: 120px;
-         height: 110px;
-         }
-         .product-card {
-         width:100%;
-         flex-direction: row; 
-         }
-         .content-section {
-         overflow: hidden;
-         padding: 10px;
-         display: flex;
-         flex-direction: column;
-         justify-content: space-between;
-         }
-         .details-section {
-         margin-bottom: 0px; 
-         }
-         .content-section p {
-         margin: 0px ; 
-         }
-         }
-      </style>
-      <script async src="https://cdn.ampproject.org/v0.js"></script>
-   </head>
-   <body>
-      <div class="background container">
-         <!-- Header start -->
-         <!-- <div class=""> -->
-         <header class="header-container">
-            <div class="header-left">
-               <button on="tap:sidebar.toggle" class="header-menu-icon">
-               <span>☰</span>
-               </button>
-               <a href="#" class="header-logo">
-                  <amp-img src="https://nleq.com/images/nleq-logo.png" alt="Logo" width="50" height="50" layout="intrinsic"></amp-img>
-               </a>
-            </div>
-            <div class="header-right">
-               <a class="header-call-to-action" href="tel:8004247625">Call Us (800) 424-7625</a>
-            </div>
-         </header>
-         <!-- Header end -->
-         <div class="search-container">
-            <div class="search-box">
-               <i class="fas fa-search"></i>
-               <input placeholder="Search for your equipment by Type, Model, Manufacturer, or ID!" type="text">
-            </div>
-         </div>
+        display: block;
+        text-align: left;
+        margin-bottom: 5px;
+      }
+      .progress-bar {
+        width: 100%;
+        background-color: #e0e0e0;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      .progress-bar div {
+        height: 6px;
+        border-radius: 5px;
+      }
+      .progress-section-percentage{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .buy-bar {
+        width: 90%;
+        background-color: #CD172B;
+      }
+      .sell-bar {
+        width: 80%;
+        background-color: #CD172B;
+      }
+
+
+
+
+
+/* equipment-progress section end*/
+
+
+
+
+
+
+
+
+
+/*card-section start*/
+
+.card-content-expand{
+/*    margin-top: 20px;*/
+text-align: center;
+}
+.card-content-expand h2 {
+      font-size: 16px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #d1d5db;
+      
+    }
+    .card-box {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex
+;
+    /* flex-direction: column; */
+    gap: 15px;
+    flex-wrap: wrap;
+}
+    .card {
+        text-align: center;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      padding: 25px 0px;
+      width: 190px;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    .card:hover {
+      background-color: #d4d4d4;
+      transform: scale(1.08);
+    }
+    .card h3 {
+      font-size: 16px;
+      margin: 0;
+    }
+    .card h4 {
+      font-size: 14px;
+      margin: 5px 0 0 0;
+    }
+   
+    
+
+
+
+
+/*card-section end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        footer {
+      background-color: black;
+      max-width: 768px;
+      min-width: 320px;
+      margin: 60px auto 0px auto;
+
+
+    }
+
+/*subscribe-section start*/
+
+
+.subscribe-section {
+    width: 90%;
+    background-color: #0a2a66;
+    padding: 20px;
+    position: relative;
+    top: -35px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+        .subscribe-section h2 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+          
+        }
+        .subscribe-section p {
+            font-size: 16px;
+              color: #ffffff;
+            margin: 15px 0px;
+        }
+        .subscribe-button {
+            display: inline-block;
+            background-color: #3b5998;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .subscribe-button i {
+            margin-right: 10px;
+        }
+
+    /*subscribe-section start*/
+
+
+
+
+
+
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px 20px;
+        }
+        .footer-header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+        .footer-header img {
+            height: 50px;
+        }
+        .footer-header .social {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-header .social span {
+            color: #ffffff;
+            font-size: 14px;
+        }
+        .footer-header .social a {
+            color: #ffffff;
+            margin-left: 10px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .footer-content {
+            width: 100%;
+            display: flex;
+             flex-wrap: wrap;
+            justify-content: space-between;
+           
+
+        }
+       
+        .footer-content .column h3 {
+            margin: 10px 0px;
+            color: #ffffff;
+            font-size: 16px;
+        }
+        .footer-content .column ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-content .column ul li {
+            margin-bottom: 10px;
+        }
+        .footer-content .column ul li a {
+            font-size: 14px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+      
+        .latest-offers {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .latest-offer-column{
+            width: 100% !important;
+        }
+        .latest-offers amp-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            border-top: 1px solid #ffffff;
+            width: 100%;
+        }
+        .footer p {
+            color: #ffffff;
+              font-size: 14px;
+            margin: 5px 0;
+        }
+        .footer p a {
+            color: #ffffff;
+            text-decoration: none;
+         
+        }
+
+
+
+
+  @media (max-width: 640px) {
+
+
+
+
+    .image-section {
+  
+    height: 110px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+    .unmatched-services-header {
+    align-items: start;
+    flex-direction: column;
+}
+
+.unmatched-services__button {
+    margin-top: 10px;
+        font-size: 14px;
+}
+.equipment-header amp-img {
+  
+    height: 250px !important;
+}
+.equipment-header .header-overlay {
+   
+    padding: 10px;
+}
+.card {
+    width: 240px;
+}
+.equipment-content-button {
+    align-items: start;
+    flex-direction: column;
+}
+.search-button {
+     margin-top: 10px; 
+}
+   .equipment-header .header-overlay div p {
+        font-size: 12px;
+
+      }
+
+.services-card-container {
+ flex-direction: column;
+}  
+
+.service-card {
+    width: 100%;
+}
+
+ .footer-content .column {
+     width: 50%;
+
+        }
+          .latest-offers-column{
+             width: 100% !important;
+        }
+        .card {
+    width: 200px;
+}
+
+}
+
+
+
+
+        @media (max-width: 575px) {
+            .header-menu-icon {
+    margin-right: 10px;
+   
+}
+            .header-call-to-action {
+
+    font-size: 12px;
+
+}
+.header-call-to-action {
+    padding: 8px;
+}
+.header-call-to-action i {
+    margin-right: 5px;
+}
+.search-box i {
+
+    margin-right: 5px;
+ 
+}
+
+.search-box {
+    padding: 7px;
+   
+}
+.background {
+  
+    height: 200px;
+
+}
+
+            .main-card-section {
+    padding: 10px;
+}
+
+.main-heading {
+    font-size: 13px;
+   
+}
+
+.product-card-section {
+
+    gap: 10px;
+   
+}
+
+.product-card {
+    width: 48%;
+
+}
+
+.content-section h2 {
+    font-size: 12px;
+}
+
+}
+
+
+
+
+
+
+        @media (max-width: 340px) {
+
+
+
+
+
+
+.search-box input {
+    font-size: 12px;
+  
+}
+
+.main-heading {
+    font-size: 12px;
+   
+}
+
+
+
+
+.product-card-section {
+        gap: 15px;
+    }
+          .image-section {
+
+        width: 120px;
+        height: 100px;
+
+    }
+.product-card {
+    width:100%;
+     flex-direction: row; 
+}
+.sale-price-tag {
+    padding: 2px;
+    font-size: 10px;
+   
+}
+.content-section {
+  overflow: hidden;
+  padding: 8px;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.details-section {
+
+     margin: 0px; 
+}
+
+.content-section p {
+   
+     margin: 0px ; 
+    
+}
+.details-section a {
+    font-size: 12px;
+   
+}
+
+}
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+</head>
+<body>
+
+
+  
+     <div class="background container">
+    <!-- Header start -->
+    <!-- <div class=""> -->
+    <header class="header-container">
+      <div class="header-left">
+        <button on="tap:sidebar.toggle" class="header-menu-icon">
+            <span>☰</span>
+        </button>
+        <a href="#" class="header-logo">
+            <amp-img src="https://nleq.com/images/nleq-logo.png" alt="Logo" width="50" height="50" layout="intrinsic"></amp-img>
+        </a>
       </div>
-      <!-- </div> -->
-      <!-- Sidebar start -->
-      <amp-sidebar id="sidebar" layout="nodisplay" side="left">
-         <div class="sidebar-logo">
-            <button on="tap:sidebar.toggle" class="header-menu-icon">
+      <div class="header-right">
+  <a class="header-call-to-action" href="tel:8004247625">
+    <i class="fas fa-phone-alt"></i> Call Us (800) 424-7625
+  </a>
+</div>
+
+    </header>
+    <!-- Header end -->
+    <div class="search-container">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input placeholder="Search for your equipment by Type, Model, Manufacturer, or ID!" type="text">
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+
+<!-- Sidebar start -->
+<amp-sidebar id="sidebar" layout="nodisplay" side="left">
+
+     <div class="sidebar-logo">
+        <button on="tap:sidebar.toggle" class="header-menu-icon">
             <span>x</span>
-            </button>
-            <a href="#" class="header-logo">
-               <amp-img src="https://nleq.com/images/nleq-logo.png" alt="Logo" width="50" height="50" layout="intrinsic"></amp-img>
-            </a>
-         </div>
-         <ul class="sidebar-menu">
-            <li><a href="#"><i class="fas fa-home icon"></i> Home</a></li>
-            <li>
-               <amp-accordion>
-                  <section>
-                     <span class="inventory-items"><i class="fas fa-clipboard-list icon"></i>Inventory</span>
-                     <ul>
-                        <amp-accordion expand-single-section>
-                           <section>
-                              <h2 class="category-header">
-                                 <i class="fas fa-chevron-right"></i> Boom Lifts
-                              </h2>
-                              <div class="subcategory">
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrow-up"></i> Articulating Boom Lift
-                                    <span>(211)</span>
-                                 </div>
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrow-right"></i> Straight Boom Lift
-                                    <span>(249)</span>
-                                 </div>
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrow-down"></i> Towable Boom Lift
-                                    <span>(34)</span>
-                                 </div>
-                              </div>
-                           </section>
-                           <section>
-                              <h2 class="category-header">
-                                 <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
-                              </h2>
-                              <div class="subcategory">
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrows-alt-v"></i> Scissor Lift
-                                    <span>(150)</span>
-                                 </div>
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrows-alt-h"></i> Mast Lift
-                                    <span>(75)</span>
-                                 </div>
-                              </div>
-                           </section>
-                           <section>
-                              <h2 class="category-header">
-                                 <i class="fas fa-chevron-right"></i> Boom Lifts
-                              </h2>
-                              <div class="subcategory">
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrow-up"></i> Articulating Boom Lift
-                                    <span>(211)</span>
-                                 </div>
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrow-right"></i> Straight Boom Lift
-                                    <span>(249)</span>
-                                 </div>
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrow-down"></i> Towable Boom Lift
-                                    <span>(34)</span>
-                                 </div>
-                              </div>
-                           </section>
-                           <section>
-                              <h2 class="category-header">
-                                 <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
-                              </h2>
-                              <div class="subcategory">
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrows-alt-v"></i> Scissor Lift
-                                    <span>(150)</span>
-                                 </div>
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrows-alt-h"></i> Mast Lift
-                                    <span>(75)</span>
-                                 </div>
-                              </div>
-                           </section>
-                           <section>
-                              <h2 class="category-header">
-                                 <i class="fas fa-chevron-right"></i> Boom Lifts
-                              </h2>
-                              <div class="subcategory">
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrow-up"></i> Articulating Boom Lift
-                                    <span>(211)</span>
-                                 </div>
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrow-right"></i> Straight Boom Lift
-                                    <span>(249)</span>
-                                 </div>
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrow-down"></i> Towable Boom Lift
-                                    <span>(34)</span>
-                                 </div>
-                              </div>
-                           </section>
-                           <section>
-                              <h2 class="category-header">
-                                 <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
-                              </h2>
-                              <div class="subcategory">
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrows-alt-v"></i> Scissor Lift
-                                    <span>(150)</span>
-                                 </div>
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrows-alt-h"></i> Mast Lift
-                                    <span>(75)</span>
-                                 </div>
-                              </div>
-                           </section>
-                           <section>
-                              <h2 class="category-header">
-                                 <i class="fas fa-chevron-right"></i> Boom Lifts
-                              </h2>
-                              <div class="subcategory">
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrow-up"></i> Articulating Boom Lift
-                                    <span>(211)</span>
-                                 </div>
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrow-right"></i> Straight Boom Lift
-                                    <span>(249)</span>
-                                 </div>
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrow-down"></i> Towable Boom Lift
-                                    <span>(34)</span>
-                                 </div>
-                              </div>
-                           </section>
-                           <section>
-                              <h2 class="category-header">
-                                 <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
-                              </h2>
-                              <div class="subcategory">
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrows-alt-v"></i> Scissor Lift
-                                    <span>(150)</span>
-                                 </div>
-                                 <div class="subcategory-item">
-                                    <i class="fas fa-arrows-alt-h"></i> Mast Lift
-                                    <span>(75)</span>
-                                 </div>
-                              </div>
-                           </section>
-                        </amp-accordion>
-                        <div class="image-container">
-                           <amp-img 
-                              alt="Boom lifts in a yard"
-                              src="https://storage.googleapis.com/a1aa/image/2YyBSkOZxOpVLREemffRfe4o8xHtTLhnuuDC1Dc9FncmTfgeJA.jpg" 
-                              width="300" height="200"
-                              layout="responsive">
-                           </amp-img>
-                           <a class="view-details" href="#">View Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                        <div class="image-container">
-                           <amp-img 
-                              alt="Boom lifts in a yard"
-                              src="https://storage.googleapis.com/a1aa/image/2YyBSkOZxOpVLREemffRfe4o8xHtTLhnuuDC1Dc9FncmTfgeJA.jpg" 
-                              width="300" height="200"
-                              layout="responsive">
-                           </amp-img>
-                           <a class="view-details" href="#">View Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                     </ul>
-                  </section>
-               </amp-accordion>
-            </li>
-            <li><a href="#"><i class="fas fa-info-circle icon"></i> About Us</a></li>
-            <li><a href="#"><i class="fas fa-bell icon"></i> Alerts</a></li>
-            <li><a href="#"><i class="fas fa-envelope icon"></i> Contact Us</a></li>
-         </ul>
-      </amp-sidebar>
-      <!-- Sidebar end -->
-      <main>
-         <div class="container">
-            <div class="main-card-section product-card-section">
-               <div class="product-card">
-                  <div class="image-section">
-                     <div class="featured-tag">Featured</div>
-                     <amp-img 
-                        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
-                        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
-                        width="300" 
-                        height="300" 
-                        layout="intrinsic">
-                     </amp-img>
-                     <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
-                  </div>
-                  <div class="content-section">
-                     <p>
-                        ID#
-                        <span style="color: #d32f2f;">144969</span>
-                     </p>
-                     <h2>2018 Genie GTH-1056</h2>
-                     <p>
-                        <i class="fas fa-clock"></i> Hour 1163
-                     </p>
-                     <div class="details-section">
-                        <a href="#">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="image-section">
-                     <div class="featured-tag">Featured</div>
-                     <amp-img 
-                        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
-                        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
-                        width="300" 
-                        height="300" 
-                        layout="intrinsic">
-                     </amp-img>
-                     <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
-                  </div>
-                  <div class="content-section">
-                     <p>
-                        ID#
-                        <span style="color: #d32f2f;">144969</span>
-                     </p>
-                     <h2>2018 Genie GTH-1056</h2>
-                     <p>
-                        <i class="fas fa-clock"></i> Hour 1163
-                     </p>
-                     <div class="details-section">
-                        <a href="#">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="image-section">
-                     <div class="featured-tag">Featured</div>
-                     <amp-img 
-                        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
-                        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
-                        width="300" 
-                        height="300" 
-                        layout="intrinsic">
-                     </amp-img>
-                     <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
-                  </div>
-                  <div class="content-section">
-                     <p>
-                        ID#
-                        <span style="color: #d32f2f;">144969</span>
-                     </p>
-                     <h2>2018 Genie GTH-1056</h2>
-                     <p>
-                        <i class="fas fa-clock"></i> Hour 1163
-                     </p>
-                     <div class="details-section">
-                        <a href="#">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="image-section">
-                     <div class="featured-tag">Featured</div>
-                     <amp-img 
-                        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
-                        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
-                        width="300" 
-                        height="300" 
-                        layout="intrinsic">
-                     </amp-img>
-                     <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
-                  </div>
-                  <div class="content-section">
-                     <p>
-                        ID#
-                        <span style="color: #d32f2f;">144969</span>
-                     </p>
-                     <h2>2018 Genie GTH-1056</h2>
-                     <p>
-                        <i class="fas fa-clock"></i> Hour 1163
-                     </p>
-                     <div class="details-section">
-                        <a href="#">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="image-section">
-                     <div class="featured-tag">Featured</div>
-                     <amp-img 
-                        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
-                        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
-                        width="300" 
-                        height="300" 
-                        layout="intrinsic">
-                     </amp-img>
-                     <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
-                  </div>
-                  <div class="content-section">
-                     <p>
-                        ID#
-                        <span style="color: #d32f2f;">144969</span>
-                     </p>
-                     <h2>2018 Genie GTH-1056</h2>
-                     <p>
-                        <i class="fas fa-clock"></i> Hour 1163
-                     </p>
-                     <div class="details-section">
-                        <a href="#">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="image-section">
-                     <div class="featured-tag">Featured</div>
-                     <amp-img 
-                        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
-                        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
-                        width="300" 
-                        height="300" 
-                        layout="intrinsic">
-                     </amp-img>
-                     <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
-                  </div>
-                  <div class="content-section">
-                     <p>
-                        ID#
-                        <span style="color: #d32f2f;">144969</span>
-                     </p>
-                     <h2>2018 Genie GTH-1056</h2>
-                     <p>
-                        <i class="fas fa-clock"></i> Hour 1163
-                     </p>
-                     <div class="details-section">
-                        <a href="#">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="image-section">
-                     <div class="featured-tag">Featured</div>
-                     <amp-img 
-                        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
-                        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
-                        width="300" 
-                        height="300" 
-                        layout="intrinsic">
-                     </amp-img>
-                     <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
-                  </div>
-                  <div class="content-section">
-                     <p>
-                        ID#
-                        <span style="color: #d32f2f;">144969</span>
-                     </p>
-                     <h2>2018 Genie GTH-1056</h2>
-                     <p>
-                        <i class="fas fa-clock"></i> Hour 1163
-                     </p>
-                     <div class="details-section">
-                        <a href="#">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="image-section">
-                     <div class="featured-tag">Featured</div>
-                     <amp-img 
-                        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
-                        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
-                        width="300" 
-                        height="300" 
-                        layout="intrinsic">
-                     </amp-img>
-                     <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
-                  </div>
-                  <div class="content-section">
-                     <p>
-                        ID#
-                        <span style="color: #d32f2f;">144969</span>
-                     </p>
-                     <h2>2018 Genie GTH-1056</h2>
-                     <p>
-                        <i class="fas fa-clock"></i> Hour 1163
-                     </p>
-                     <div class="details-section">
-                        <a href="#">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="image-section">
-                     <div class="featured-tag">Featured</div>
-                     <amp-img 
-                        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
-                        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
-                        width="300" 
-                        height="300" 
-                        layout="intrinsic">
-                     </amp-img>
-                     <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
-                  </div>
-                  <div class="content-section">
-                     <p>
-                        ID#
-                        <span style="color: #d32f2f;">144969</span>
-                     </p>
-                     <h2>2018 Genie GTH-1056</h2>
-                     <p>
-                        <i class="fas fa-clock"></i> Hour 1163
-                     </p>
-                     <div class="details-section">
-                        <a href="#">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="image-section">
-                     <div class="featured-tag">Featured</div>
-                     <amp-img 
-                        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
-                        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
-                        width="300" 
-                        height="300" 
-                        layout="intrinsic">
-                     </amp-img>
-                     <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
-                  </div>
-                  <div class="content-section">
-                     <p>
-                        ID#
-                        <span style="color: #d32f2f;">144969</span>
-                     </p>
-                     <h2>2018 Genie GTH-1056</h2>
-                     <p>
-                        <i class="fas fa-clock"></i> Hour 1163
-                     </p>
-                     <div class="details-section">
-                        <a href="#">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="image-section">
-                     <div class="featured-tag">Featured</div>
-                     <amp-img 
-                        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
-                        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
-                        width="300" 
-                        height="300" 
-                        layout="intrinsic">
-                     </amp-img>
-                     <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
-                  </div>
-                  <div class="content-section">
-                     <p>
-                        ID#
-                        <span style="color: #d32f2f;">144969</span>
-                     </p>
-                     <h2>2018 Genie GTH-1056</h2>
-                     <p>
-                        <i class="fas fa-clock"></i> Hour 1163
-                     </p>
-                     <div class="details-section">
-                        <a href="#">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="product-card">
-                  <div class="image-section">
-                     <div class="featured-tag">Featured</div>
-                     <amp-img 
-                        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
-                        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
-                        width="300" 
-                        height="300" 
-                        layout="intrinsic">
-                     </amp-img>
-                     <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
-                  </div>
-                  <div class="content-section">
-                     <p>
-                        ID#
-                        <span style="color: #d32f2f;">144969</span>
-                     </p>
-                     <h2>2018 Genie GTH-1056</h2>
-                     <p>
-                        <i class="fas fa-clock"></i> Hour 1163
-                     </p>
-                     <div class="details-section">
-                        <a href="#">
-                        View Details
-                        <i class="fas fa-arrow-right"></i>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <!-- about-us section end -->
-            <div class=" main-card-section about-us-container">
-               <h2>About <span>Us</span></h2>
-               <h4>Welcome to:</br>
-                  National Lift Equipment
-               </h4>
-               <p>Whether you are looking to buy or sell, National Lift Equipment is the Construction Equipment Specialist.</p>
-               <p>Established in 1990 in Bucks County, PA, the heart of the East Coast corridor, National Lift Equipment is conveniently located close to all major East Coast thorofare’s. We have developed a reputation for reliable new and used Aerial Lifts and Material Handling Equipment. Our locally owned status ensures attention to quality and overall customer satisfaction.</p>
-               <p>Here at National Lift Equipment, we offer equipment from the industry's leading manufacturers such as JLG, Skytrak, Genie, Caterpillar, Skyjack, JCB, Haulotte, Nifty, MEC, Gehl and many others.</p>
-               <p>Quality, service, pricing and selection, is what sets National Lift Equipment apart from the competition.</p>
-               <a href="#"><button class="about-us-read-more">Read More <i class="fas fa-arrow-right"></i></button></a>
-            </div>
-            <!-- about-us section end -->
-            <!-- unmatched-services section start -->
-            <div class="unmatched-services">
-               <!-- Header Section -->
-               <div class="unmatched-services-header">
-                  <h2 class="unmatched-services__title">Unmatched <span>Services</span></h2>
-                  <!-- <button class="unmatched-services__button">Get Free Quotation</button> -->
-                  <button class="unmatched-services__button">
-                  Get Free Quotation
-                  <i class="fas fa-file-signature"></i>
-                  </button>
-               </div>
-               <!-- Service 1: The Right Equipment -->
-               <div class="services-card-container">
-                  <div class="service-card">
-                     <div class="service-card__icon"><i class="fas fa-tools"></i></div>
-                     <h3 class="service-card__title">The Right Equipment</h3>
-                     <p class="service-card__description">With over 100 years of combined experience, our knowledgeable sales team will quickly locate the brand and model of equipment you want with all the options you need. We can answer any questions you have about the equipment you are looking to purchase. Our goal is to get you the right equipment for the job at the best available pricing.</p>
-                  </div>
-                  <!-- Service 2: Financing Options -->
-                  <div class="service-card">
-                     <div class="service-card__icon"><i class="fas fa-hand-holding-usd"></i></div>
-                     <h3 class="service-card__title">Financing Options</h3>
-                     <p class="service-card__description">Need financing for your purchase? We can refer you to a finance company that specializes in financing construction equipment and who will meet your needs and budget.</p>
-                  </div>
-                  <!-- Service 3: Delivery -->
-                  <div class="service-card">
-                     <div class="service-card__icon"><i class="fas fa-truck"></i></div>
-                     <h3 class="service-card__title">Delivery</h3>
-                     <p class="service-card__description">Our in-house freight department will be happy to quote LTL or truckload delivery options at competitive rates. Our carriers are fully bonded and insured to protect your purchase. We can accommodate all your delivery needs utilizing the most practical and efficient methods to save you time and money.</p>
-                  </div>
-                  <!-- Service 4: Buying Power -->
-                  <div class="service-card">
-                     <div class="service-card__icon"><i class="fas fa-dollar-sign"></i></div>
-                     <h3 class="service-card__title">Buying Power</h3>
-                     <p class="service-card__description">National Lift Equipment not only sells new and used equipment, we can also purchase or market your equipment assets and bring you fair market value.</p>
-                  </div>
-               </div>
-            </div>
-            <!-- unmatched-services section end -->
-            <!-- equipment-progress section start -->
-            <div class="equipment-container">
-               <div class="equipment-header">
-                  <amp-img alt="Construction equipment in a yard" height="350px" src="https://storage.googleapis.com/a1aa/image/gj1xV5O5HdaxOtf5fUIFtzO0KYcGq47QJswI0WSQ5YK79d5TA.jpg"></amp-img>
-                  <div class="header-overlay">
-                     <div>
-                        <span>30+</span>
-                        <p>Years In High Quality</p>
-                     </div>
-                     <div>
-                        <span>3.5k</span>
-                        <p>Used Construction Equipment</p>
-                     </div>
-                     <div>
-                        <span>80+</span>
-                        <p>Satisfied Customers</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="equipment-content">
-                  <div class="equipment-content-button">
-                     <h2>Buy Used <span>Equipment</span></h2>
-                     <a class="search-button" href="#">Start Searching <i class="fas fa-arrow-right"></i></a>
-                  </div>
-                  <div class="progress-section">
-                     <div class="progress-section-percentage">
-                        <span>Buy Equipment</span>
-                        <span>90%</span>
-                     </div>
-                     <div class="progress-bar">
-                        <div class="buy-bar"></div>
-                     </div>
-                  </div>
-                  <div class="progress-section">
-                     <div class="progress-section-percentage">
-                        <span>Sell Equipment</span>
-                        <span>80%</span>
-                     </div>
-                     <div class="progress-bar">
-                        <div class="sell-bar"></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <!-- equipment-progress section end -->
-            <div class="main-card-section">
-               <!-- card section start -->
-               <div class="card-content-expand">
-                  <amp-img 
-                     src="https://nleq.com/images/Enroll.png" 
-                     alt="Logo" 
-                     width="30" 
-                     height="30" 
-                     layout="intrinsic"></amp-img>
-                  <h2>National Lift Equipment Used Construction Equipment Categories - Learn More</h2>
-               </div>
-               <div class="card-box">
-                  <div class="card">
-                     <h3>Telehandlers</h3>
-                     <h4>For Sale</h4>
-                  </div>
-                  <div class="card">
-                     <h3>Articulating Boom Lifts</h3>
-                     <h4>For Sale</h4>
-                  </div>
-                  <div class="card">
-                     <h3>Straight Boom Lifts</h3>
-                     <h4>For Sale</h4>
-                  </div>
-                  <div class="card">
-                     <h3>Towable Boom Lifts</h3>
-                     <h4>For Sale</h4>
-                  </div>
-                  <div class="card">
-                     <h3>Scissor Lifts</h3>
-                     <h4>For Sale</h4>
-                  </div>
-                  <div class="card">
-                     <h3>Scissor Lifts</h3>
-                     <h4>For Sale</h4>
-                  </div>
-               </div>
-               <!-- Card Section end -->
-            </div>
-      </main>
-      <!-- footer Section start -->
-      <footer>
-      <div class="subscribe-section">
-      <h2>Get Latest Updates & Offers</h2>
-      <p>Sign up to receive exclusive updates, offers, and insights directly to your inbox.</p>
-      <a href="#" class="subscribe-button">
-      <i class="fas fa-envelope"></i> Subscribe
-      </a>
+        </button>
+        <a href="#" class="header-logo">
+            <amp-img src="https://nleq.com/images/nleq-logo.png" alt="Logo" width="40" height="40" layout="intrinsic"></amp-img>
+        </a>
+    </div>
+    <ul class="sidebar-menu">
+  <li><a href="#"><i class="fas fa-home icon"></i> Home</a></li>
+      
+        <li>
+            <amp-accordion>
+                <section>
+                 <span class="inventory-items"><i class="fas fa-clipboard-list icon"></i>Inventory</span>
+                    <ul>
+    <amp-accordion expand-single-section>
+      <section>
+        <h2 class="category-header">
+          <i class="fas fa-chevron-right"></i> Boom Lifts
+        </h2>
+        <div class="subcategory">
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-up"></i> Articulating Boom Lift
+            <span>(211)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-right"></i> Straight Boom Lift
+            <span>(249)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-down"></i> Towable Boom Lift
+            <span>(34)</span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="category-header">
+          <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
+        </h2>
+        <div class="subcategory">
+          <div class="subcategory-item">
+            <i class="fas fa-arrows-alt-v"></i> Scissor Lift
+            <span>(150)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrows-alt-h"></i> Mast Lift
+            <span>(75)</span>
+          </div>
+        </div>
+      </section>
+       <section>
+        <h2 class="category-header">
+          <i class="fas fa-chevron-right"></i> Boom Lifts
+        </h2>
+        <div class="subcategory">
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-up"></i> Articulating Boom Lift
+            <span>(211)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-right"></i> Straight Boom Lift
+            <span>(249)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-down"></i> Towable Boom Lift
+            <span>(34)</span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="category-header">
+          <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
+        </h2>
+        <div class="subcategory">
+          <div class="subcategory-item">
+            <i class="fas fa-arrows-alt-v"></i> Scissor Lift
+            <span>(150)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrows-alt-h"></i> Mast Lift
+            <span>(75)</span>
+          </div>
+        </div>
+      </section>
+       <section>
+        <h2 class="category-header">
+          <i class="fas fa-chevron-right"></i> Boom Lifts
+        </h2>
+        <div class="subcategory">
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-up"></i> Articulating Boom Lift
+            <span>(211)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-right"></i> Straight Boom Lift
+            <span>(249)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-down"></i> Towable Boom Lift
+            <span>(34)</span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="category-header">
+          <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
+        </h2>
+        <div class="subcategory">
+          <div class="subcategory-item">
+            <i class="fas fa-arrows-alt-v"></i> Scissor Lift
+            <span>(150)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrows-alt-h"></i> Mast Lift
+            <span>(75)</span>
+          </div>
+        </div>
+      </section>
+       <section>
+        <h2 class="category-header">
+          <i class="fas fa-chevron-right"></i> Boom Lifts
+        </h2>
+        <div class="subcategory">
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-up"></i> Articulating Boom Lift
+            <span>(211)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-right"></i> Straight Boom Lift
+            <span>(249)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrow-down"></i> Towable Boom Lift
+            <span>(34)</span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="category-header">
+          <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
+        </h2>
+        <div class="subcategory">
+          <div class="subcategory-item">
+            <i class="fas fa-arrows-alt-v"></i> Scissor Lift
+            <span>(150)</span>
+          </div>
+          <div class="subcategory-item">
+            <i class="fas fa-arrows-alt-h"></i> Mast Lift
+            <span>(75)</span>
+          </div>
+        </div>
+      </section>
+    </amp-accordion>
+    <div class="image-container">
+      <amp-img 
+        alt="Boom lifts in a yard"
+        src="https://storage.googleapis.com/a1aa/image/2YyBSkOZxOpVLREemffRfe4o8xHtTLhnuuDC1Dc9FncmTfgeJA.jpg" 
+        width="300" height="200"
+        layout="responsive">
+      </amp-img>
+      <a class="view-details" href="#">View Details <i class="fas fa-arrow-right"></i></a>
+    </div>
+     <div class="image-container">
+      <amp-img 
+        alt="Boom lifts in a yard"
+        src="https://storage.googleapis.com/a1aa/image/2YyBSkOZxOpVLREemffRfe4o8xHtTLhnuuDC1Dc9FncmTfgeJA.jpg" 
+        width="300" height="200"
+        layout="responsive">
+      </amp-img>
+      <a class="view-details" href="#">View Details <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+              </ul>
+                </section>
+            </amp-accordion>
+        </li>
+<li><a href="#"><i class="fas fa-info-circle icon"></i> About Us</a></li>
+<li><a href="#"><i class="fas fa-bell icon"></i> Alerts</a></li>
+<li><a href="#"><i class="fas fa-envelope icon"></i> Contact Us</a></li>
+    </ul>
+</amp-sidebar>
+
+<!-- Sidebar end -->
+        
+    
+
+   
+
+
+
+
+
+<main>
+<div class="container">
+<div class="main-card-section">
+ <div class="product-card-section">
+    
+   <h1 class="main-heading">The Leader In High Quality Used And New Construction Equipment For <span>Over 30 Years</span></h1>
+  <div class="product-card">
+    <div class="image-section">
+      <p class="featured-tag">Featured</p>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
-      <div class="footer-container">
-      <div class="footer-header">
-      <a href="#">
-      <amp-img src="https://nleq.com/images//nleq-logo.png" alt="Logo" width="200" height="200" layout="intrinsic"></amp-img>
-      </a>
-      <div class="social">
-      <span>Follow us on</span>
-      <a href="https://www.facebook.com/NationalLiftEquipment/">
-      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 14.363 9.579">
-      <path id="arrow_drk" data-name="arrow drk" d="M17.034,11.435a.652.652,0,0,0,0,.918l3.033,3.038H8.519a.649.649,0,0,0,0,1.3H20.058l-3.033,3.038a.657.657,0,0,0,0,.918.646.646,0,0,0,.913,0L22.053,16.5h0a.728.728,0,0,0,.135-.2.619.619,0,0,0,.05-.249.65.65,0,0,0-.185-.454L17.942,11.45A.636.636,0,0,0,17.034,11.435Z" transform="translate(-7.875 -11.252)" fill="white"></path>
-      </svg>
-      </a>
-      <a href="https://www.facebook.com/NationalLiftEquipment/">
-      <svg 
-         xmlns="http://www.w3.org/2000/svg" 
-         width="30" 
-         height="30" 
-         viewBox="0 0 40 40" 
-         aria-label="Facebook"
-         >
-      <!-- White Background -->
-      <rect width="40" height="40" fill="white" rx="20" />
-      <!-- Facebook Icon -->
-      <g transform="translate(-61 -487)">
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="image-section">
+      <p class="featured-tag">Featured</p>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="image-section">
+      <p class="featured-tag">Featured</p>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="image-section">
+      <p class="featured-tag">Featured</p>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="image-section">
+      <p class="featured-tag">Featured</p>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="image-section">
+      <p class="featured-tag">Featured</p>
+      <amp-img 
+        src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" 
+        alt="Blue Genie GTH-1056 telehandler on a lot with other machinery in the background" 
+        width="300" 
+        height="300" 
+        layout="intrinsic">
+      </amp-img>
+      <p class="sale-price-tag">Sale Price <span>$92,875</span></p>
+    </div>
+    <div class="content-section">
+      <p>
+        ID#
+        <span style="color: #d32f2f;">144969</span>
+      </p>
+      <h2>2018 Genie GTH-1056</h2>
+      <p>
+        <i class="fas fa-clock"></i> Hour 1163
+      </p>
+      <div class="details-section">
+        <a href="#">
+          View Details
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+      <!-- about-us section end -->
+<div class="about-us-container">
+        <h2>About <span>Us</span></h2>
+        <h4>Welcome to:<br>
+        National Lift Equipment</h4>
+        <p>Whether you are looking to buy or sell, National Lift Equipment is the Construction Equipment Specialist.</p>
+        <p>Established in 1990 in Bucks County, PA, the heart of the East Coast corridor, National Lift Equipment is conveniently located close to all major East Coast thorofare’s. We have developed a reputation for reliable new and used Aerial Lifts and Material Handling Equipment. Our locally owned status ensures attention to quality and overall customer satisfaction.</p>
+        <p>Here at National Lift Equipment, we offer equipment from the industry's leading manufacturers such as JLG, Skytrak, Genie, Caterpillar, Skyjack, JCB, Haulotte, Nifty, MEC, Gehl and many others.</p>
+        <p>Quality, service, pricing and selection, is what sets National Lift Equipment apart from the competition.</p>
+        <div class="about-us-read-more">
+            <a href="#"><button class="about-us-read-btn">Read More <i class="fas fa-arrow-right"></i></button></a>
+        </div>
+        
+    </div>
+    <!-- about-us section end -->
+  </div>
+
+
+
+
+
+
+
+
+<!-- unmatched-services section start -->
+<div class="unmatched-services">
+        <!-- Header Section -->
+        <div class="unmatched-services-header">
+            <h2 class="unmatched-services__title">Unmatched <span>Services</span></h2>
+            <button class="unmatched-services__button">
+      
+        Get Free Quotation
+          <i class="fas fa-file-signature"></i>
+    </button>
+        </div>
+        
+        <!-- Service 1: The Right Equipment -->
+        <div class="services-card-container">
+        <div class="service-card">
+            <div class="service-card__icon"><i class="fas fa-tools"></i></div>
+            <h3 class="service-card__title">The Right Equipment</h3>
+            <p class="service-card__description">With over 100 years of combined experience, our knowledgeable sales team will quickly locate the brand and model of equipment you want with all the options you need. We can answer any questions you have about the equipment you are looking to purchase. Our goal is to get you the right equipment for the job at the best available pricing.</p>
+        </div>
+        
+        <!-- Service 2: Financing Options -->
+        <div class="service-card">
+            <div class="service-card__icon"><i class="fas fa-hand-holding-usd"></i></div>
+            <h3 class="service-card__title">Financing Options</h3>
+            <p class="service-card__description">Need financing for your purchase? We can refer you to a finance company that specializes in financing construction equipment and who will meet your needs and budget.</p>
+        </div>
+        
+        <!-- Service 3: Delivery -->
+        <div class="service-card">
+            <div class="service-card__icon"><i class="fas fa-truck"></i></div>
+            <h3 class="service-card__title">Delivery</h3>
+            <p class="service-card__description">Our in-house freight department will be happy to quote LTL or truckload delivery options at competitive rates. Our carriers are fully bonded and insured to protect your purchase. We can accommodate all your delivery needs utilizing the most practical and efficient methods to save you time and money.</p>
+        </div>
+        
+        <!-- Service 4: Buying Power -->
+        <div class="service-card">
+            <div class="service-card__icon"><i class="fas fa-dollar-sign"></i></div>
+            <h3 class="service-card__title">Buying Power</h3>
+            <p class="service-card__description">National Lift Equipment not only sells new and used equipment, we can also purchase or market your equipment assets and bring you fair market value.</p>
+        </div>
+    </div>
+    </div>
+
+
+<!-- unmatched-services section end -->
+<!-- equipment-progress section start -->
+ <div class="equipment-container">
+      <div class="equipment-header">
+        <amp-img alt="Construction equipment in a yard" height="350px" src="https://storage.googleapis.com/a1aa/image/gj1xV5O5HdaxOtf5fUIFtzO0KYcGq47QJswI0WSQ5YK79d5TA.jpg"></amp-img>
+        <div class="header-overlay">
+          <div>
+            <span>30+</span>
+            <p>Years In High Quality</p>
+           
+          </div>
+          <div>
+            <span>3.5k</span>
+            <p>Used Construction Equipment</p>
+          </div>
+          <div>
+            <span>80+</span>
+            <p>Satisfied Customers</p>
+          </div>
+        </div>
+      </div>
+      <div class="equipment-content">
+        <div class="equipment-content-button">
+        <h2>Buy Used <span>Equipment</span></h2>
+        <a class="search-button" href="#">Start Searching <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="progress-section">
+            <div class="progress-section-percentage">
+          <span>Buy Equipment</span>
+          <span>90%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="buy-bar"></div>
+          </div>
+        </div>
+        <div class="progress-section">
+          
+           <div class="progress-section-percentage">
+         <span>Sell Equipment</span>
+          <span>80%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="sell-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- equipment-progress section end -->
+<!-- card section start -->
+<div class="card-item-section">
+
+
+    <div class="card-content-expand">
+        <amp-img src="https://nleq.com/images/Enroll.png" 
+  alt="Logo" 
+  width="30" 
+  height="30" 
+  layout="intrinsic">
+</amp-img>
+    <h2>National Lift Equipment Used Construction Equipment Categories - Learn More</h2>
+    </div>
+   
+  <div class="card-box">
+    <div class="card">
+      <h3>Telehandlers</h3>
+      <h4>For Sale</h4>
+    </div>
+    <div class="card">
+      <h3>Articulating Boom Lifts</h3>
+      <h4>For Sale</h4>
+    </div>
+    <div class="card">
+      <h3>Straight Boom Lifts</h3>
+      <h4>For Sale</h4>
+    </div>
+    <div class="card">
+      <h3>Towable Boom Lifts</h3>
+      <h4>For Sale</h4>
+    </div>
+    <div class="card">
+      <h3>Scissor Lifts</h3>
+      <h4>For Sale</h4>
+    </div>
+    <div class="card">
+      <h3>Scissor Lifts</h3>
+      <h4>For Sale</h4>
+    </div>
+  
+</div>
+ 
+    <!-- Card Section end -->
+
+
+    </div>
+     </div>
+    </main>
+
+
+
+
+    <!-- footer Section start -->
+    <footer>
+
+
+ <div class="subscribe-section">
+        <h2>Get Latest Updates & Offers</h2>
+        <p>Sign up to receive exclusive updates, offers, and insights directly to your inbox.</p>
+        <a href="#" class="subscribe-button">
+            <i class="fas fa-envelope"></i> Subscribe
+        </a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="footer-container">
+        <div class="footer-header">
+           <a href="#">
+  <amp-img src="https://nleq.com/images//nleq-logo.png" alt="Logo" width="200" height="200" layout="intrinsic"></amp-img>
+</a>
+
+            <div class="social">
+                <span>Follow us on</span>
+                <a href="https://www.facebook.com/NationalLiftEquipment/">
+  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 14.363 9.579">
+    <path id="arrow_drk" data-name="arrow drk" d="M17.034,11.435a.652.652,0,0,0,0,.918l3.033,3.038H8.519a.649.649,0,0,0,0,1.3H20.058l-3.033,3.038a.657.657,0,0,0,0,.918.646.646,0,0,0,.913,0L22.053,16.5h0a.728.728,0,0,0,.135-.2.619.619,0,0,0,.05-.249.65.65,0,0,0-.185-.454L17.942,11.45A.636.636,0,0,0,17.034,11.435Z" transform="translate(-7.875 -11.252)" fill="white"></path>
+  </svg>
+</a>
+
+              <a href="https://www.facebook.com/NationalLiftEquipment/">
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width="30" 
+    height="30" 
+    viewBox="0 0 40 40" 
+    aria-label="Facebook"
+  >
+    <!-- White Background -->
+    <rect width="40" height="40" fill="white" rx="20" />
+    
+    <!-- Facebook Icon -->
+    <g transform="translate(-61 -487)">
       <path 
-         d="M9.874,9.288,10.332,6.3H7.465V4.361A1.494,1.494,0,0,1,9.15,2.746h1.3V.2A15.9,15.9,0,0,0,8.139,0a3.648,3.648,0,0,0-3.9,4.022V6.3H1.609V9.288H4.234v7.224H7.465V9.288Z" 
-         transform="translate(75.391 499)" 
-         fill="#002868"
-         ></path>
-      </g>
-      </svg>
-      </a>
-      </div>
-      </div>
-      <div class="footer-content">
-      <div class="column">
-      <h3>Equipment Type</h3>
-      <ul>
-      <li><a href="#">All Used Vehicles</a></li>
-      <li><a href="#">Boom Lifts</a></li>
-      <li><a href="#">Scissor &amp; Mast Lifts</a></li>
-      <li><a href="#">Compact Lifts</a></li>
-      <li><a href="#">Material Handling</a></li>
-      <li><a href="#">Cranes</a></li>
-      <li><a href="#">Earth Moving Equipment</a></li>
-      <li><a href="#">Power, Lighting, &amp; Air</a></li>
-      <li><a href="#">Other</a></li>
-      </ul>
-      </div>
-      <div class="column">
-      <h3>Quick Links</h3>
-      <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Alerts</a></li>
-      <li><a href="#">Contact Us</a></li>
-      </ul>
-      </div>
-      <div class="column latest-offers-column">
-      <h3>Latest Offers</h3>
-      <div class="latest-offers">
-      <amp-img alt="Offer 1" height="100" width="100" 
-         src="https://storage.googleapis.com/a1aa/image/agKQf6pqp80EaShEYnNDfeV6xFLdseMUD5ACcecAECBAheReJA.jpg">
-      </amp-img>
-      <amp-img alt="Offer 2" height="100" width="100" 
-         src="https://storage.googleapis.com/a1aa/image/i8DGtRq7KzoaFpjVy2uIccLVQwvcFD13x0OBtQul7B9B9ReJA.jpg">
-      </amp-img>
-      </div>
-      <div class="latest-offers">
-      <amp-img alt="Offer 3" height="100" width="100" 
-         src="https://storage.googleapis.com/a1aa/image/NBVNN7oEaCbZBpX2ZIWiZv6FyO3YVI9RKWG6TvVSf32E6j8JA.jpg">
-      </amp-img>
-      <amp-img alt="Offer 4" height="100" width="100" 
-         src="https://storage.googleapis.com/a1aa/image/e5Yecf96jOBp3JhOll1HzIrvwBKorjmCyLMLW8dcJnwNoPynA.jpg">
-      </amp-img>
-      </div>
-      </div>
-      </div>
-      <div class="footer">
-      <p>National Lift Equipment © 2024. All Rights Reserved</p>
-      <p><a href="#">Terms of use</a></p>
-      <p><a href="#">Privacy Policy</a></p>
-      </div>
-      </div>
-      </footer>
+        d="M9.874,9.288,10.332,6.3H7.465V4.361A1.494,1.494,0,0,1,9.15,2.746h1.3V.2A15.9,15.9,0,0,0,8.139,0a3.648,3.648,0,0,0-3.9,4.022V6.3H1.609V9.288H4.234v7.224H7.465V9.288Z" 
+        transform="translate(75.391 499)" 
+        fill="#002868"
+      ></path>
+    </g>
+  </svg>
+</a>
+
+
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="column">
+                <h3>Equipment Type</h3>
+                <ul>
+                    <li><a href="#">All Used Vehicles</a></li>
+                    <li><a href="#">Boom Lifts</a></li>
+                    <li><a href="#">Scissor &amp; Mast Lifts</a></li>
+                    <li><a href="#">Compact Lifts</a></li>
+                    <li><a href="#">Material Handling</a></li>
+                    <li><a href="#">Cranes</a></li>
+                    <li><a href="#">Earth Moving Equipment</a></li>
+                    <li><a href="#">Power, Lighting, &amp; Air</a></li>
+                    <li><a href="#">Other</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Alerts</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="column latest-offers-column">
+                <h3>Latest Offers</h3>
+                <div class="latest-offers">
+                    <amp-img alt="Offer 1" height="100" width="100" 
+                        src="https://storage.googleapis.com/a1aa/image/agKQf6pqp80EaShEYnNDfeV6xFLdseMUD5ACcecAECBAheReJA.jpg">
+                    </amp-img>
+                    <amp-img alt="Offer 2" height="100" width="100" 
+                        src="https://storage.googleapis.com/a1aa/image/i8DGtRq7KzoaFpjVy2uIccLVQwvcFD13x0OBtQul7B9B9ReJA.jpg">
+                    </amp-img>
+                  
+                </div>
+                 <div class="latest-offers">
+                   
+                    <amp-img alt="Offer 3" height="100" width="100" 
+                        src="https://storage.googleapis.com/a1aa/image/NBVNN7oEaCbZBpX2ZIWiZv6FyO3YVI9RKWG6TvVSf32E6j8JA.jpg">
+                    </amp-img>
+                    <amp-img alt="Offer 4" height="100" width="100" 
+                        src="https://storage.googleapis.com/a1aa/image/e5Yecf96jOBp3JhOll1HzIrvwBKorjmCyLMLW8dcJnwNoPynA.jpg">
+                    </amp-img>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>National Lift Equipment © 2024. All Rights Reserved</p>
+            <p><a href="#">Terms of use</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+        </div>
+    </div>
+     </footer>
       <!-- footer Section start -->
-      </div>
-   </body>
+     </div>
+     
+
+
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
