@@ -196,26 +196,12 @@ body {
     font-weight: 400;
     background: none;
     text-overflow: ellipsis;
-    white-space: nowrap; /* Ensure text stays on one line */
-    overflow: hidden; /* Hide overflowing text */
-    width: 100%; /* Make sure the input adapts to parent width */
-    max-width: 100%; /* For AMP, ensure it doesn’t exceed its container */
-}
-.search-box input:focus {
-    border: none;
-    outline: none;
-    flex: 1;
-    font-size: 16px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    background: none;
-    text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     width: 100%;
     max-width: 100%;
-    color: #000; /* Same as the default text color */
 }
+
     .search-box input::placeholder {
         color: black;
     }
@@ -235,11 +221,11 @@ body {
 
 
 .main-card-section{
-    margin-top: 20px;
+    margin-top: 10px;
+    padding: 10px;
     background-color: #e5e5e5;
     border-radius: 5px;
 
-        padding: 10px;
 }
 
 
