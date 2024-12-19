@@ -201,6 +201,21 @@ body {
     width: 100%; /* Make sure the input adapts to parent width */
     max-width: 100%; /* For AMP, ensure it doesn’t exceed its container */
 }
+.search-box input:focus {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    background: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    color: #000; /* Same as the default text color */
+}
     .search-box input::placeholder {
         color: black;
     }
