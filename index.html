@@ -193,9 +193,13 @@ body {
     flex: 1;
     font-size: 16px;
     font-family: "Poppins";
- font-weight: 400;
- background: none;
- text-overflow: ellipsis;
+    font-weight: 400;
+    background: none;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Ensure text stays on one line */
+    overflow: hidden; /* Hide overflowing text */
+    width: 100%; /* Make sure the input adapts to parent width */
+    max-width: 100%; /* For AMP, ensure it doesn’t exceed its container */
 }
     .search-box input::placeholder {
         color: black;
