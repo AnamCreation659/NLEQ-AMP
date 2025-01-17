@@ -95,7 +95,7 @@
          left: 0;
          right: 0;
          margin: 0 auto;
-         z-index: 2;
+         z-index: 5;
          }
          .header-left {
          display: flex;
@@ -337,10 +337,10 @@
          border-radius: 10px;
          }
          .contact-info .img-text {
-         position: absolute;
-         left: 30px;
-         color: black;
-         }
+           position: absolute;
+           left: 30px;
+          z-index: 2;
+}
          .contact-info .overlay {
          position: absolute;
          top: 0;
@@ -406,6 +406,9 @@
          .title-input,
          .phone-input,
          .city-input,
+         .state-input,
+         .address-input,
+         .comment-input,
          .zipcode-input{
          position: relative;
          }
@@ -414,6 +417,10 @@
          font-size: 0.9em;
          position: absolute;
          bottom: -20px;
+         }
+         .textarea{
+          width: 100%;
+          margin-top: 20px;
          }
          .password-wrapper {
          position: relative;
@@ -848,7 +855,7 @@
             <div class="container">
                <div class="main-card-section">
                   <div class="contact-info">
-                     <img alt="Background image of construction equipment" height="350" src="https://storage.googleapis.com/a1aa/image/WoAo9WhnMN7JGN39UcGMNJ6R4IY5YgkTxbBkf3KXBNVkypBKA.jpg" width="300">
+                     <img alt="Background image of construction equipment" height="350" src="https://storage.googleapis.com/a1aa/image/QAcmsRN7PSZEMNV5LPGu61ZbJ325X6g9s1pf5FacrtS5gMBKA.jpg" width="300">
                      <div class="overlay"></div>
                      <div class="img-text">
                         <h2>Contact Information</h2>
@@ -924,6 +931,31 @@
                         Please enter a valid 10-digit phone number.
                         </span>
                      </div>
+
+                    <!-- street adress Field -->
+                    <div class="address-input">
+                      <input type="text"
+                         name="address"
+                         id="address"
+                         required
+                         placeholder="Street Address">
+                      <span visible-when-invalid="valueMissing" validation-for="address">
+                        Street Address is required.
+                      </span>
+                   </div>
+
+                      <!-- state Field -->
+                      <div class="state-input">
+                        <input type="text"
+                           name="state"
+                           id="state"
+                           required
+                           placeholder="State">
+                        <span visible-when-invalid="valueMissing" validation-for="state">
+                        State is required.
+
+                        </span>
+                     </div>
                      <!-- City Field -->
                      <div class="city-input">
                         <input type="text"
@@ -958,26 +990,7 @@
                            minlength="10"
                            maxlength="500"
                            placeholder="Your comment here (10-500 characters)"></textarea>
-                        <span visible-when-invalid="valueMissing" validation-for="comment">
-                        Comment is required.
-                        </span>
-                        <span visible-when-invalid="tooShort" validation-for="comment">
-                        Comment must be at least 10 characters long.
-                        </span>
-                        <span visible-when-invalid="tooLong" validation-for="comment">
-                        Comment must be less than 500 characters long.
-                        </span>
-                     </div>
-                     <!-- Status Field -->
-                     <div class="status-input">
-                        <select name="status" id="status" required>
-                           <option value="" disabled selected>Select Status</option>
-                           <option value="active">Active</option>
-                           <option value="inactive">Inactive</option>
-                        </select>
-                        <span visible-when-invalid="valueMissing" validation-for="status">
-                        Status is required.
-                        </span>
+                       
                      </div>
                      <!-- Submit Button -->
                      <button type="submit">Submit</button>
