@@ -1,0 +1,151 @@
+<!doctype html>
+<html amp>
+<head>
+  <meta charset="utf-8">
+  <title>Equipment Listings</title>
+  <link rel="canonical" href="self.html" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 90%;
+      margin: 20px auto;
+    }
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .filter-bar .filter,
+    .filter-bar .sort,
+    .filter-bar .view-options {
+      display: flex;
+      align-items: center;
+    }
+    .filter-bar .filter i, .filter-bar .view-options i {
+      margin-right: 5px;
+    }
+    .filter-bar .sort select {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .filter-bar .view-options i {
+      font-size: 20px;
+      margin-left: 15px;
+      cursor: pointer;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 300px;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 10px;
+    }
+    .card amp-img {
+      width: 100%;
+      height: auto;
+    }
+    .card .details {
+      padding: 15px;
+    }
+    .card .details .price {
+      color: #ff0000;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .card .details .id {
+      color: #ff0000;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    .card .details .location, .card .details .hours {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .card .details .view-detail {
+      display: inline-block;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #ff0000;
+      font-weight: 500;
+      margin-top: 10px;
+    }
+    .card .details .view-detail:hover {
+      background-color: #cc0000;
+    }
+    .card .details .view-detail.black {
+      background-color: #000;
+    }
+    .card .details .view-detail.black:hover {
+      background-color: #333;
+    }
+    @media (max-width: 768px) {
+      .card {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+      }
+    }
+  </style>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="filter-bar">
+      <div class="filter">
+        <span>Filter</span>
+      </div>
+      <div class="sort">
+        <select>
+          <option>Newly Listed</option>
+        </select>
+      </div>
+      <div class="view-options">
+        <span>List</span>
+        <span>Grid</span>
+      </div>
+    </div>
+
+    <!-- Card 1 -->
+    <div class="card">
+      <amp-img alt="Yellow construction vehicle" src="https://storage.googleapis.com/a1aa/image/896dmmzjO7pPKRpAVDoDlcuPVf5bxCZRvCmHCCI3Vyq2AeGUA.jpg" width="300" height="200" layout="responsive"></amp-img>
+      <div class="details">
+        <div class="id">ID# 140499</div>
+        <div class="price">Sale Price $59,875</div>
+        <div class="location">Singapore</div>
+        <div class="hours">Hour 465</div>
+        <a class="view-detail" href="#">View Detail</a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <amp-img alt="Yellow construction vehicle" src="https://storage.googleapis.com/a1aa/image/896dmmzjO7pPKRpAVDoDlcuPVf5bxCZRvCmHCCI3Vyq2AeGUA.jpg" width="300" height="200" layout="responsive"></amp-img>
+      <div class="details">
+        <div class="id">ID# 140499</div>
+        <div class="price">Sale Price $59,875</div>
+        <div class="location">Singapore</div>
+        <div class="hours">Hour 465</div>
+        <a class="view-detail black" href="#">View Detail</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
