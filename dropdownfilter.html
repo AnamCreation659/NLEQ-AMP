@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html ⚡>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <style amp-custom>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .sidebar {
+            width: 300px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .sidebar h2 {
+            background-color: #d32f2f;
+            color: #fff;
+            padding: 10px;
+            margin: 0;
+            font-size: 16px;
+        }
+        .filter-section {
+            margin-top: 10px;
+        }
+        .filter-section h3 {
+            font-size: 14px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        .filter-section h3 i {
+            font-size: 12px;
+        }
+        .filter-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: none; /* Initially hidden */
+        }
+        .filter-section ul[hidden] {
+            display: none; /* Hidden state */
+        }
+        .filter-section ul:not([hidden]) {
+            display: block; /* Visible state */
+        }
+        .filter-section ul li {
+            margin: 5px 0;
+        }
+        .filter-section ul li label {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+        .filter-section ul li input {
+            margin-right: 10px;
+            accent-color: #d32f2f; /* Checkbox color */
+        }
+    </style>
+</head>
+<body>
+    <!-- AMP State -->
+    <amp-state id="filterState">
+        <script type="application/json">
+        {
+            "equipment": false,
+            "subcategory": false,
+            "manufacturer": false,
+            "model": false,
+            "power": false,
+            "fuel": false,
+            "drive": false,
+            "tire": false,
+            "year": false
+        }
+        </script>
+    </amp-state>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Show Results By:</h2>
+        
+        <ul class="i-amphtml-accordion-content" id="80_AMP_content_0" aria-labelledby="80_AMP_header_0" role="region">
+            <amp-accordion expand-single-section="" class="i-amphtml-element i-amphtml-layout-container i-amphtml-built i-amphtml-layout" i-amphtml-layout="container">
+               <section>
+                  <h2 class="category-header i-amphtml-accordion-header" id="62_AMP_header_0" role="button" aria-controls="62_AMP_content_0" aria-expanded="false" tabindex="0">
+                     <i class="fas fa-chevron-right"></i> Boom Lifts
+                  </h2>
+                  <div class="subcategory i-amphtml-accordion-content" id="62_AMP_content_0" aria-labelledby="62_AMP_header_0" role="region">
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrow-up"></i> Articulating Boom Lift
+                        <span>(211)</span>
+                     </div>
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrow-right"></i> Straight Boom Lift
+                        <span>(249)</span>
+                     </div>
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrow-down"></i> Towable Boom Lift
+                        <span>(34)</span>
+                     </div>
+                  </div>
+               </section>
+               <section>
+                  <h2 class="category-header i-amphtml-accordion-header" id="62_AMP_header_1" role="button" aria-controls="62_AMP_content_1" aria-expanded="false" tabindex="0">
+                     <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
+                  </h2>
+                  <div class="subcategory i-amphtml-accordion-content" id="62_AMP_content_1" aria-labelledby="62_AMP_header_1" role="region">
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrows-alt-v"></i> Scissor Lift
+                        <span>(150)</span>
+                     </div>
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrows-alt-h"></i> Mast Lift
+                        <span>(75)</span>
+                     </div>
+                  </div>
+               </section>
+               <section>
+                  <h2 class="category-header i-amphtml-accordion-header" id="62_AMP_header_2" role="button" aria-controls="62_AMP_content_2" aria-expanded="false" tabindex="0">
+                     <i class="fas fa-chevron-right"></i> Boom Lifts
+                  </h2>
+                  <div class="subcategory i-amphtml-accordion-content" id="62_AMP_content_2" aria-labelledby="62_AMP_header_2" role="region">
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrow-up"></i> Articulating Boom Lift
+                        <span>(211)</span>
+                     </div>
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrow-right"></i> Straight Boom Lift
+                        <span>(249)</span>
+                     </div>
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrow-down"></i> Towable Boom Lift
+                        <span>(34)</span>
+                     </div>
+                  </div>
+               </section>
+               <section>
+                  <h2 class="category-header i-amphtml-accordion-header" id="62_AMP_header_3" role="button" aria-controls="62_AMP_content_3" aria-expanded="false" tabindex="0">
+                     <i class="fas fa-chevron-right"></i>Scissor &amp; Mast Lifts
+                  </h2>
+                  <div class="subcategory i-amphtml-accordion-content" id="62_AMP_content_3" aria-labelledby="62_AMP_header_3" role="region">
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrows-alt-v"></i> Scissor Lift
+                        <span>(150)</span>
+                     </div>
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrows-alt-h"></i> Mast Lift
+                        <span>(75)</span>
+                     </div>
+                  </div>
+               </section>
+               <section>
+                  <h2 class="category-header i-amphtml-accordion-header" id="62_AMP_header_4" role="button" aria-controls="62_AMP_content_4" aria-expanded="false" tabindex="0">
+                     <i class="fas fa-chevron-right"></i> Boom Lifts
+                  </h2>
+                  <div class="subcategory i-amphtml-accordion-content" id="62_AMP_content_4" aria-labelledby="62_AMP_header_4" role="region">
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrow-up"></i> Articulating Boom Lift
+                        <span>(211)</span>
+                     </div>
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrow-right"></i> Straight Boom Lift
+                        <span>(249)</span>
+                     </div>
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrow-down"></i> Towable Boom Lift
+                        <span>(34)</span>
+                     </div>
+                  </div>
+               </section>
+               <section>
+                  <h2 class="category-header i-amphtml-accordion-header" id="62_AMP_header_5" role="button" aria-controls="62_AMP_content_5" aria-expanded="false" tabindex="0">
+                     <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
+                  </h2>
+                  <div class="subcategory i-amphtml-accordion-content" id="62_AMP_content_5" aria-labelledby="62_AMP_header_5" role="region">
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrows-alt-v"></i> Scissor Lift
+                        <span>(150)</span>
+                     </div>
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrows-alt-h"></i> Mast Lift
+                        <span>(75)</span>
+                     </div>
+                  </div>
+               </section>
+               <section>
+                  <h2 class="category-header i-amphtml-accordion-header" id="62_AMP_header_6" role="button" aria-controls="62_AMP_content_6" aria-expanded="false" tabindex="0">
+                     <i class="fas fa-chevron-right"></i> Boom Lifts
+                  </h2>
+                  <div class="subcategory i-amphtml-accordion-content" id="62_AMP_content_6" aria-labelledby="62_AMP_header_6" role="region">
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrow-up"></i> Articulating Boom Lift
+                        <span>(211)</span>
+                     </div>
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrow-right"></i> Straight Boom Lift
+                        <span>(249)</span>
+                     </div>
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrow-down"></i> Towable Boom Lift
+                        <span>(34)</span>
+                     </div>
+                  </div>
+               </section>
+               <section>
+                  <h2 class="category-header i-amphtml-accordion-header" id="62_AMP_header_7" role="button" aria-controls="62_AMP_content_7" aria-expanded="false" tabindex="0">
+                     <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
+                  </h2>
+                  <div class="subcategory i-amphtml-accordion-content" id="62_AMP_content_7" aria-labelledby="62_AMP_header_7" role="region">
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrows-alt-v"></i> Scissor Lift
+                        <span>(150)</span>
+                     </div>
+                     <div class="subcategory-item">
+                        <i class="fas fa-arrows-alt-h"></i> Mast Lift
+                        <span>(75)</span>
+                     </div>
+                  </div>
+               </section>
+            </amp-accordion>
+            <div class="image-container">
+               <amp-img alt="Boom lifts in a yard" src="https://storage.googleapis.com/a1aa/image/2YyBSkOZxOpVLREemffRfe4o8xHtTLhnuuDC1Dc9FncmTfgeJA.jpg" width="300" height="200" layout="responsive" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined i-amphtml-built i-amphtml-layout" i-amphtml-layout="responsive" style="--loader-delay-offset: 0ms !important;"><i-amphtml-sizer slot="i-amphtml-svc" style="padding-top: 66.6667%;"></i-amphtml-sizer>
+               <img decoding="async" alt="Boom lifts in a yard" src="https://storage.googleapis.com/a1aa/image/2YyBSkOZxOpVLREemffRfe4o8xHtTLhnuuDC1Dc9FncmTfgeJA.jpg" class="i-amphtml-fill-content i-amphtml-replaced-content"></amp-img>
+               <a class="view-details" href="#">View Details <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="image-container">
+               <amp-img alt="Boom lifts in a yard" src="https://storage.googleapis.com/a1aa/image/2YyBSkOZxOpVLREemffRfe4o8xHtTLhnuuDC1Dc9FncmTfgeJA.jpg" width="300" height="200" layout="responsive" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined i-amphtml-built i-amphtml-layout" i-amphtml-layout="responsive" style="--loader-delay-offset: 1ms !important;"><i-amphtml-sizer slot="i-amphtml-svc" style="padding-top: 66.6667%;"></i-amphtml-sizer>
+               <img decoding="async" alt="Boom lifts in a yard" src="https://storage.googleapis.com/a1aa/image/2YyBSkOZxOpVLREemffRfe4o8xHtTLhnuuDC1Dc9FncmTfgeJA.jpg" class="i-amphtml-fill-content i-amphtml-replaced-content"></amp-img>
+               <a class="view-details" href="#">View Details <i class="fas fa-arrow-right"></i></a>
+            </div>
+         </ul>
+    </div>
+</body>
+</html>
+
+
+<html ⚡>
+<head>
+    <meta charset="UTF-8">
+    <title>Search Filters</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style amp-custom>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 10px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .search-filters {
+            display: flex;
+            align-items: center;
+        }
+        .search-filters span {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .filter-item {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .filter-item span {
+            margin-right: 5px;
+        }
+        .filter-item i {
+            color: red;
+            cursor: pointer;
+        }
+        .clear-all {
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="search-filters">
+            <span>Search Filters :</span>
+            <div class="filter-item">
+                <span>Price Low to High</span>
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="filter-item">
+                <span>Boom Lifts</span>
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="filter-item">
+                <span>Articulating Boom Lift</span>
+                <i class="fas fa-times"></i>
+            </div>
+            <span class="clear-all">Clear All</span>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

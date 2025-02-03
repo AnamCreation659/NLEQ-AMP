@@ -8,6 +8,8 @@
       <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
       <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+      <!-- <script async src="https://cdn.ampproject.org/v0.js"></script> -->
 
       <title>Inventory</title>
       <style amp-custom>
@@ -259,6 +261,26 @@
     border: none;
     color: white;
     padding: 10px 15px;
+    /* text-align: center; */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    
+    .view-options{
+      margin-left: 10px;
+    }
+
+
+    .view-options button {
+      font-family: "Poppins";
+    background-color: #CD172B;
+    border: none;
+    color: white;
+    padding: 10px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -267,19 +289,65 @@
     border-radius: 5px;
     cursor: pointer;
     }
-    .view-options button {
-      border: none;
-      background: none;
-      cursor: pointer;
-      font-size: 18px;
-      color: #666;
-      margin-left: 10px;
-      opacity: 0.7;
-    }
-    .view-options button.active {
-      color: #e74c3c;
-      opacity: 1;
-    }
+  
+
+
+
+
+    .search-filters {
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+        .search-filters span {
+    /* font-weight: bold; */
+    /* margin-right: 10px; */
+    font-size: 12px;
+    font-weight: 600; /* Semi Bold */
+    font-style: normal;
+}
+        .filter-item {
+            background-color: #e5e5e5;
+            border-radius: 5px;
+            padding: 8px;
+            /* margin-right: 10px; */
+            display: flex;
+            align-items: center;
+        }
+        .filter-item span {
+            margin-right: 5px;
+        }
+        .filter-item i {
+            color: #CD172B;
+            cursor: pointer;
+        }
+        .clear-all {
+            color: #CD172B;
+            cursor: pointer;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     .product-list {
       display: flex;
       flex-wrap: wrap;
@@ -589,6 +657,94 @@
          color: #ffffff;
          }
          
+
+
+
+
+
+         /* slider section start */
+         .carousel-container {
+            margin-top: 40px;
+        }
+        #custom-carousel{
+            position: relative;
+        }
+        
+
+        .client-img {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+        .client-info{
+        margin-left: 10px;
+         display: flex;
+         flex-direction: column;
+         align-items: start;
+         justify-content: space-between;
+        }
+        
+        .img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+ 
+        .comment {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 4px;
+        }
+        .comment-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .comment p{
+            text-align: start;
+            font-family: "Poppins";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+        }
+
+        .served{
+         margin-top: 20px;
+        }
+        .served h2 {
+            font-size: 18px;
+           
+        }
+        .served h2 span {
+            color: #CD172B;
+        }
+        .served p {
+            font-size: 14px;
+           
+            margin: 10px 0 15px;
+        }
+        .served .btn {
+         font-family: "Poppins";
+    background-color: #CD172B;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+        }
+
+        .amp-mode-mouse .amp-carousel-button, amp-carousel.i-amphtml-carousel-has-controls .amp-carousel-button, amp-carousel[controls] .amp-carousel-button {
+    opacity: 0;
+    visibility: visible;
+}
+         /* slider section end  */
          /* footer section start */
          footer {
          background-color: black;
@@ -753,6 +909,10 @@
          }
          }
          @media (max-width: 575px) {
+            .served h2 {
+            font-size: 20px;
+           
+        }
             .list-view .content-section {
         overflow: hidden;
         /* padding: 8px; */
@@ -780,14 +940,28 @@
 
 
 
+    .filter-button {
+      padding: 8px;
+      font-size: 12px;
   
+}
+
+.view-options button {
+   padding: 8px;
+   font-size: 12px;
+}
 
 
+.list-grid-view .sort select {
+   padding: 8px;
+        font-size: 12px;
+   
+}
 
-
-
-
-
+.search-filters span {
+    font-size: 10px;
+   
+}
 
 
          .card {
@@ -817,6 +991,10 @@
          }
          .subscribe-section h2 {
          font-size: 18px;
+         }
+
+         .client-info{
+            font-size: 14px;
          }
          }
          @media (max-width: 340px) {
@@ -887,6 +1065,14 @@
          .subscribe-section h2 {
          font-size: 16px;
          }
+         .served h2 {
+            font-size: 14px;
+           
+        }
+        .served .btn {
+         padding: 8px;
+         font-size: 12px;
+}
          }
       </style>
       <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -1112,6 +1298,7 @@
                     <div class="sort">
                       <select>
                         <option>Newly Listed</option>
+                        <option>Newly Listed</option>
                       </select>
                     </div>
                     <div class="view-options">
@@ -1126,13 +1313,89 @@
                   
                  
                 </div>
-             <!-- Dropdown -->
+               
+             <!-- Dropdown start -->
              <div class="dropdown" [class]="dropdownOpen ? 'dropdown show' : 'dropdown'">
-              <div class="dropdown-item">Option 1</div>
-              <div class="dropdown-item">Option 2</div>
-              <div class="dropdown-item">Option 3</div>
+              
+                  <section>
+                  
+                     <amp-accordion expand-single-section>
+                        <section>
+                            <h2 class="category-header">
+                                <i class="fas fa-chevron-right"></i> Boom Lifts
+                            </h2>
+                            <div class="subcategory">
+                                <div class="subcategory-item">
+                                    <label>
+                                        <input type="checkbox">
+                                        Articulating Boom Lift
+                                        <span>(211)</span>
+                                    </label>
+                                </div>
+                                <div class="subcategory-item">
+                                    <label>
+                                        <input type="checkbox">
+                                         Straight Boom Lift
+                                        <span>(249)</span>
+                                    </label>
+                                </div>
+                                <div class="subcategory-item">
+                                    <label>
+                                        <input type="checkbox">
+                                        Towable Boom Lift
+                                        <span>(34)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <h2 class="category-header">
+                              <i class="fas fa-chevron-right"></i> Scissor Mast Lifts
+                            </h2>
+                            <div class="subcategory">
+                                <div class="subcategory-item">
+                                    <label>
+                                        <input type="checkbox">
+                                         Scissor Lift
+                                        <span>(150)</span>
+                                    </label>
+                                </div>
+                                <div class="subcategory-item">
+                                    <label>
+                                        <input type="checkbox">
+                                        Mast Lift
+                                        <span>(75)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </section>
+                    </amp-accordion>
+                    
+                        
+          
+                  </section>
+              
             </div>
-             
+             <!-- Dropdown end -->
+             <!-- Search start -->
+            <div class="search-filters">
+               <span>Search Filters :</span>
+               <div class="filter-item">
+                   <span>Price Low to High</span>
+                   <i class="fas fa-times"></i>
+               </div>
+               <div class="filter-item">
+                   <span>Boom Lifts</span>
+                   <i class="fas fa-times"></i>
+               </div>
+               <div class="filter-item">
+                   <span>Articulating Boom Lift</span>
+                   <i class="fas fa-times"></i>
+               </div>
+               <span class="clear-all">Clear All</span>
+           </div>
+           <!-- Search end -->
+
                <div  id="product-list" class="product-card-section" [class]="isListView ? 'list-view' : 'product-card-section'">
     
 
@@ -1312,6 +1575,171 @@
                   </div>
                
               </div>
+
+
+
+              <!-- slider section start -->
+              <div class="served">
+               <h2>Satisfied Clients We Served <span>For Years</span></h2>
+               <p>Founded in 1990, National Lift Equipment is the market leader in providing customers with fast access to the used construction equipment they need....</p>
+               <a href="#" class="btn">Discover More</a>
+           </div>
+              <div class="carousel-container">
+               <amp-carousel id="custom-carousel" autoplay type="slides" layout="fixed-height" height="300" delay="2000">
+              
+                    <div class="carousel-slide">
+                       <div class="client-img">
+                           <amp-img class="img" src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" width="" height="" layout="responsive"
+                               alt="Slide 2"></amp-img>
+                           <div class="client-info">
+                               <p>Guillermo Constenla</p>
+                               <p>12-23-223</p>
+                           </div>
+                       </div>
+                       <div class="comment">
+                           <div class="comment-header">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="70" height="20" viewBox="0 0 56 10">
+                                   <g id="Group_6146" data-name="Group 6146" transform="translate(0.152 0.45)">
+                                       <path id="Polygon_69" data-name="Polygon 69"
+                                           d="M4.522,1.546a.5.5,0,0,1,.955,0l.594,1.921a.5.5,0,0,0,.478.352H8.522a.5.5,0,0,1,.3.9L7.187,5.969a.5.5,0,0,0-.174.545l.616,1.992a.5.5,0,0,1-.781.545L5.3,7.871a.5.5,0,0,0-.607,0L3.153,9.05a.5.5,0,0,1-.781-.545l.616-1.992a.5.5,0,0,0-.174-.545L1.175,4.717a.5.5,0,0,1,.3-.9H3.451a.5.5,0,0,0,.478-.352Z"
+                                           transform="translate(-0.152 -0.45) scale(1)" fill="#f6bb06" />
+                                       <path id="Polygon_72" data-name="Polygon 72"
+                                           d="M4.522,1.546a.5.5,0,0,1,.955,0l.594,1.921a.5.5,0,0,0,.478.352H8.522a.5.5,0,0,1,.3.9L7.187,5.969a.5.5,0,0,0-.174.545l.616,1.992a.5.5,0,0,1-.781.545L5.3,7.871a.5.5,0,0,0-.607,0L3.153,9.05a.5.5,0,0,1-.781-.545l.616-1.992a.5.5,0,0,0-.174-.545L1.175,4.717a.5.5,0,0,1,.3-.9H3.451a.5.5,0,0,0,.478-.352Z"
+                                           transform="translate(22.848 -0.45) scale(1)" fill="#f6bb06" />
+                                       <path id="Polygon_70" data-name="Polygon 70"
+                                           d="M4.018,1.732a.5.5,0,0,1,.963,0l.479,1.722a.5.5,0,0,0,.482.366h1.7a.5.5,0,0,1,.324.881l-1.5,1.272a.5.5,0,0,0-.158.515l.54,1.942a.5.5,0,0,1-.805.515L4.824,7.914a.5.5,0,0,0-.647,0L2.961,8.946a.5.5,0,0,1-.805-.515L2.7,6.489a.5.5,0,0,0-.158-.515L1.038,4.7a.5.5,0,0,1,.324-.881h1.7a.5.5,0,0,0,.482-.366Z"
+                                           transform="translate(11.848 -0.45) scale(1)" fill="#f6bb06" />
+                                       <path id="Polygon_71" data-name="Polygon 71"
+                                           d="M4.018,1.732a.5.5,0,0,1,.963,0l.479,1.722a.5.5,0,0,0,.482.366h1.7a.5.5,0,0,1,.324.881l-1.5,1.272a.5.5,0,0,0-.158.515l.54,1.942a.5.5,0,0,1-.805.515L4.824,7.914a.5.5,0,0,0-.647,0L2.961,8.946a.5.5,0,0,1-.805-.515L2.7,6.489a.5.5,0,0,0-.158-.515L1.038,4.7a.5.5,0,0,1,.324-.881h1.7a.5.5,0,0,0,.482-.366Z"
+                                           transform="translate(34.848 -0.45) scale(1)" fill="#f6bb06" />
+                                       <path id="Polygon_73" data-name="Polygon 73"
+                                           d="M4.522,1.546a.5.5,0,0,1,.955,0l.594,1.921a.5.5,0,0,0,.478.352H8.522a.5.5,0,0,1,.3.9L7.187,5.969a.5.5,0,0,0-.174.545l.616,1.992a.5.5,0,0,1-.781.545L5.3,7.871a.5.5,0,0,0-.607,0L3.153,9.05a.5.5,0,0,1-.781-.545l.616-1.992a.5.5,0,0,0-.174-.545L1.175,4.717a.5.5,0,0,1,.3-.9H3.451a.5.5,0,0,0,.478-.352Z"
+                                           transform="translate(45.848 -0.45) scale(1)" fill="#f6bb06" />
+                                   </g>
+                               </svg>
+                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20px" height="20px">
+                                   <path fill="#FFC107"
+                                       d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z">
+                                   </path>
+                                   <path fill="#FF3D00"
+                                       d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z">
+                                   </path>
+                                   <path fill="#4CAF50"
+                                       d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z">
+                                   </path>
+                                   <path fill="#1976D2"
+                                       d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z">
+                                   </path>
+                               </svg>
+                           </div>
+                           <p>I bought an used Haulotte HB62 lift boom to National Lift equipment, and the service they gave was superb.
+                               The machine is in excellent conditions and the people of National Lift Equipment helped me in every detail to put the machine in Newark Port. Excellente service.</p>
+                       </div>
+                   </div>
+                   
+                   <div class="carousel-slide">
+                     <div class="client-img">
+                         <amp-img class="img" src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" width="" height="" layout="responsive"
+                             alt="Slide 2"></amp-img>
+                         <div class="client-info">
+                             <p>Guillermo Constenla</p>
+                             <p>12-23-223</p>
+                         </div>
+                     </div>
+                     <div class="comment">
+                         <div class="comment-header">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="70" height="20" viewBox="0 0 56 10">
+                                 <g id="Group_6146" data-name="Group 6146" transform="translate(0.152 0.45)">
+                                     <path id="Polygon_69" data-name="Polygon 69"
+                                         d="M4.522,1.546a.5.5,0,0,1,.955,0l.594,1.921a.5.5,0,0,0,.478.352H8.522a.5.5,0,0,1,.3.9L7.187,5.969a.5.5,0,0,0-.174.545l.616,1.992a.5.5,0,0,1-.781.545L5.3,7.871a.5.5,0,0,0-.607,0L3.153,9.05a.5.5,0,0,1-.781-.545l.616-1.992a.5.5,0,0,0-.174-.545L1.175,4.717a.5.5,0,0,1,.3-.9H3.451a.5.5,0,0,0,.478-.352Z"
+                                         transform="translate(-0.152 -0.45) scale(1)" fill="#f6bb06" />
+                                     <path id="Polygon_72" data-name="Polygon 72"
+                                         d="M4.522,1.546a.5.5,0,0,1,.955,0l.594,1.921a.5.5,0,0,0,.478.352H8.522a.5.5,0,0,1,.3.9L7.187,5.969a.5.5,0,0,0-.174.545l.616,1.992a.5.5,0,0,1-.781.545L5.3,7.871a.5.5,0,0,0-.607,0L3.153,9.05a.5.5,0,0,1-.781-.545l.616-1.992a.5.5,0,0,0-.174-.545L1.175,4.717a.5.5,0,0,1,.3-.9H3.451a.5.5,0,0,0,.478-.352Z"
+                                         transform="translate(22.848 -0.45) scale(1)" fill="#f6bb06" />
+                                     <path id="Polygon_70" data-name="Polygon 70"
+                                         d="M4.018,1.732a.5.5,0,0,1,.963,0l.479,1.722a.5.5,0,0,0,.482.366h1.7a.5.5,0,0,1,.324.881l-1.5,1.272a.5.5,0,0,0-.158.515l.54,1.942a.5.5,0,0,1-.805.515L4.824,7.914a.5.5,0,0,0-.647,0L2.961,8.946a.5.5,0,0,1-.805-.515L2.7,6.489a.5.5,0,0,0-.158-.515L1.038,4.7a.5.5,0,0,1,.324-.881h1.7a.5.5,0,0,0,.482-.366Z"
+                                         transform="translate(11.848 -0.45) scale(1)" fill="#f6bb06" />
+                                     <path id="Polygon_71" data-name="Polygon 71"
+                                         d="M4.018,1.732a.5.5,0,0,1,.963,0l.479,1.722a.5.5,0,0,0,.482.366h1.7a.5.5,0,0,1,.324.881l-1.5,1.272a.5.5,0,0,0-.158.515l.54,1.942a.5.5,0,0,1-.805.515L4.824,7.914a.5.5,0,0,0-.647,0L2.961,8.946a.5.5,0,0,1-.805-.515L2.7,6.489a.5.5,0,0,0-.158-.515L1.038,4.7a.5.5,0,0,1,.324-.881h1.7a.5.5,0,0,0,.482-.366Z"
+                                         transform="translate(34.848 -0.45) scale(1)" fill="#f6bb06" />
+                                     <path id="Polygon_73" data-name="Polygon 73"
+                                         d="M4.522,1.546a.5.5,0,0,1,.955,0l.594,1.921a.5.5,0,0,0,.478.352H8.522a.5.5,0,0,1,.3.9L7.187,5.969a.5.5,0,0,0-.174.545l.616,1.992a.5.5,0,0,1-.781.545L5.3,7.871a.5.5,0,0,0-.607,0L3.153,9.05a.5.5,0,0,1-.781-.545l.616-1.992a.5.5,0,0,0-.174-.545L1.175,4.717a.5.5,0,0,1,.3-.9H3.451a.5.5,0,0,0,.478-.352Z"
+                                         transform="translate(45.848 -0.45) scale(1)" fill="#f6bb06" />
+                                 </g>
+                             </svg>
+                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20px" height="20px">
+                                 <path fill="#FFC107"
+                                     d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z">
+                                 </path>
+                                 <path fill="#FF3D00"
+                                     d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z">
+                                 </path>
+                                 <path fill="#4CAF50"
+                                     d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z">
+                                 </path>
+                                 <path fill="#1976D2"
+                                     d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z">
+                                 </path>
+                             </svg>
+                         </div>
+                         <p>I bought an used Haulotte HB62 lift boom to National Lift equipment, and the service they gave was superb.
+                             The machine is in excellent conditions and the people of National Lift Equipment helped me in every detail to put the machine in Newark Port. Excellente service.</p>
+                     </div>
+                 </div>
+                 
+                    <div class="carousel-slide">
+                       <div class="client-img">
+                           <amp-img class="img" src="https://storage.googleapis.com/a1aa/image/Yn6a3D7VawJXJJSP8BvD95fGYI5GXcKVe3U8kuP7suU11Z7TA.jpg" width="" height="" layout="responsive"
+                               alt="Slide 2"></amp-img>
+                           <div class="client-info">
+                               <p>Guillermo Constenla</p>
+                               <p>12-23-223</p>
+                           </div>
+                       </div>
+                       <div class="comment">
+                           <div class="comment-header">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="70" height="20" viewBox="0 0 56 10">
+                                   <g id="Group_6146" data-name="Group 6146" transform="translate(0.152 0.45)">
+                                       <path id="Polygon_69" data-name="Polygon 69"
+                                           d="M4.522,1.546a.5.5,0,0,1,.955,0l.594,1.921a.5.5,0,0,0,.478.352H8.522a.5.5,0,0,1,.3.9L7.187,5.969a.5.5,0,0,0-.174.545l.616,1.992a.5.5,0,0,1-.781.545L5.3,7.871a.5.5,0,0,0-.607,0L3.153,9.05a.5.5,0,0,1-.781-.545l.616-1.992a.5.5,0,0,0-.174-.545L1.175,4.717a.5.5,0,0,1,.3-.9H3.451a.5.5,0,0,0,.478-.352Z"
+                                           transform="translate(-0.152 -0.45) scale(1)" fill="#f6bb06" />
+                                       <path id="Polygon_72" data-name="Polygon 72"
+                                           d="M4.522,1.546a.5.5,0,0,1,.955,0l.594,1.921a.5.5,0,0,0,.478.352H8.522a.5.5,0,0,1,.3.9L7.187,5.969a.5.5,0,0,0-.174.545l.616,1.992a.5.5,0,0,1-.781.545L5.3,7.871a.5.5,0,0,0-.607,0L3.153,9.05a.5.5,0,0,1-.781-.545l.616-1.992a.5.5,0,0,0-.174-.545L1.175,4.717a.5.5,0,0,1,.3-.9H3.451a.5.5,0,0,0,.478-.352Z"
+                                           transform="translate(22.848 -0.45) scale(1)" fill="#f6bb06" />
+                                       <path id="Polygon_70" data-name="Polygon 70"
+                                           d="M4.018,1.732a.5.5,0,0,1,.963,0l.479,1.722a.5.5,0,0,0,.482.366h1.7a.5.5,0,0,1,.324.881l-1.5,1.272a.5.5,0,0,0-.158.515l.54,1.942a.5.5,0,0,1-.805.515L4.824,7.914a.5.5,0,0,0-.647,0L2.961,8.946a.5.5,0,0,1-.805-.515L2.7,6.489a.5.5,0,0,0-.158-.515L1.038,4.7a.5.5,0,0,1,.324-.881h1.7a.5.5,0,0,0,.482-.366Z"
+                                           transform="translate(11.848 -0.45) scale(1)" fill="#f6bb06" />
+                                       <path id="Polygon_71" data-name="Polygon 71"
+                                           d="M4.018,1.732a.5.5,0,0,1,.963,0l.479,1.722a.5.5,0,0,0,.482.366h1.7a.5.5,0,0,1,.324.881l-1.5,1.272a.5.5,0,0,0-.158.515l.54,1.942a.5.5,0,0,1-.805.515L4.824,7.914a.5.5,0,0,0-.647,0L2.961,8.946a.5.5,0,0,1-.805-.515L2.7,6.489a.5.5,0,0,0-.158-.515L1.038,4.7a.5.5,0,0,1,.324-.881h1.7a.5.5,0,0,0,.482-.366Z"
+                                           transform="translate(34.848 -0.45) scale(1)" fill="#f6bb06" />
+                                       <path id="Polygon_73" data-name="Polygon 73"
+                                           d="M4.522,1.546a.5.5,0,0,1,.955,0l.594,1.921a.5.5,0,0,0,.478.352H8.522a.5.5,0,0,1,.3.9L7.187,5.969a.5.5,0,0,0-.174.545l.616,1.992a.5.5,0,0,1-.781.545L5.3,7.871a.5.5,0,0,0-.607,0L3.153,9.05a.5.5,0,0,1-.781-.545l.616-1.992a.5.5,0,0,0-.174-.545L1.175,4.717a.5.5,0,0,1,.3-.9H3.451a.5.5,0,0,0,.478-.352Z"
+                                           transform="translate(45.848 -0.45) scale(1)" fill="#f6bb06" />
+                                   </g>
+                               </svg>
+                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20px" height="20px">
+                                   <path fill="#FFC107"
+                                       d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z">
+                                   </path>
+                                   <path fill="#FF3D00"
+                                       d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z">
+                                   </path>
+                                   <path fill="#4CAF50"
+                                       d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z">
+                                   </path>
+                                   <path fill="#1976D2"
+                                       d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z">
+                                   </path>
+                               </svg>
+                           </div>
+                           <p>I bought an used Haulotte HB62 lift boom to National Lift equipment, and the service they gave was superb.
+                               The machine is in excellent conditions and the people of National Lift Equipment helped me in every detail to put the machine in Newark Port. Excellente service.</p>
+                       </div>
+                   </div>
+               </amp-carousel>
+           </div>
+              <!-- slider section end -->
+
             </div>
           </div>
          </div>
