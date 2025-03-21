@@ -1,504 +1,574 @@
 <!DOCTYPE html>
 <html ⚡>
-
-<head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-   <link rel="canonical" href="https://example.com" />
-   <script async src="https://cdn.ampproject.org/v0.js"></script>
-   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-   <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
-   <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
-   <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-   <title>ContactUs</title>
-   <style amp-custom>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
+    <link rel="canonical" href="https://example.com" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script
+      async
+      custom-element="amp-sidebar"
+      src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-accordion"
+      src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-form"
+      src="https://cdn.ampproject.org/v0/amp-form-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-bind"
+      src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>ContactUs</title>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
+    <noscript
+      ><style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style></noscript
+    >
+    <style amp-custom>
       * {
-         padding: 0;
-         margin: 0;
-         box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
       }
 
       body {
-         font-family: "Poppins";
-         font-weight: 400;
+        font-family: "Poppins";
+        font-weight: 400;
       }
 
       @font-face {
-         font-family: "Poppins";
-         src: url("./fontFamily/Poppins-Black.ttf") format("truetype");
-         font-weight: 900;
-         /* Black */
-         font-style: normal;
+        font-family: "Poppins";
+        src: url("./fontFamily/Poppins-Black.ttf") format("truetype");
+        font-weight: 900;
+        /* Black */
+        font-style: normal;
       }
 
       @font-face {
-         font-family: "Poppins";
-         src: url("./fontFamily/Poppins-Bold.ttf") format("truetype");
-         font-weight: 700;
-         /* Bold */
-         font-style: normal;
+        font-family: "Poppins";
+        src: url("./fontFamily/Poppins-Bold.ttf") format("truetype");
+        font-weight: 700;
+        /* Bold */
+        font-style: normal;
       }
 
       @font-face {
-         font-family: "Poppins";
-         src: url("./fontFamily/Poppins-ExtraBold.ttf") format("truetype");
-         font-weight: 800;
-         /* Extra Bold */
-         font-style: normal;
+        font-family: "Poppins";
+        src: url("./fontFamily/Poppins-ExtraBold.ttf") format("truetype");
+        font-weight: 800;
+        /* Extra Bold */
+        font-style: normal;
       }
 
       @font-face {
-         font-family: "Poppins";
-         src: url("./fontFamily/Poppins-ExtraLight.ttf") format("truetype");
-         font-weight: 200;
-         /* Extra Light */
-         font-style: normal;
+        font-family: "Poppins";
+        src: url("./fontFamily/Poppins-ExtraLight.ttf") format("truetype");
+        font-weight: 200;
+        /* Extra Light */
+        font-style: normal;
       }
 
       @font-face {
-         font-family: "Poppins";
-         src: url("./fontFamily/Poppins-Light.ttf") format("truetype");
-         font-weight: 300;
-         /* Light */
-         font-style: normal;
+        font-family: "Poppins";
+        src: url("./fontFamily/Poppins-Light.ttf") format("truetype");
+        font-weight: 300;
+        /* Light */
+        font-style: normal;
       }
 
       @font-face {
-         font-family: "Poppins";
-         src: url("./fontFamily/Poppins-Medium.ttf") format("truetype");
-         font-weight: 500;
-         /* Medium */
-         font-style: normal;
+        font-family: "Poppins";
+        src: url("./fontFamily/Poppins-Medium.ttf") format("truetype");
+        font-weight: 500;
+        /* Medium */
+        font-style: normal;
       }
 
       @font-face {
-         font-family: "Poppins";
-         src: url("./fontFamily/Poppins-Regular.ttf") format("truetype");
-         font-weight: 400;
-         /* Regular */
-         font-style: normal;
+        font-family: "Poppins";
+        src: url("./fontFamily/Poppins-Regular.ttf") format("truetype");
+        font-weight: 400;
+        /* Regular */
+        font-style: normal;
       }
 
       @font-face {
-         font-family: "Poppins";
-         src: url("./fontFamily/Poppins-SemiBold.ttf") format("truetype");
-         font-weight: 600;
-         /* Semi Bold */
-         font-style: normal;
+        font-family: "Poppins";
+        src: url("./fontFamily/Poppins-SemiBold.ttf") format("truetype");
+        font-weight: 600;
+        /* Semi Bold */
+        font-style: normal;
       }
 
       @font-face {
-         font-family: "Poppins";
-         src: url("./fontFamily/Poppins-Thin.ttf") format("truetype");
-         font-weight: 100;
-         /* Thin */
-         font-style: normal;
+        font-family: "Poppins";
+        src: url("./fontFamily/Poppins-Thin.ttf") format("truetype");
+        font-weight: 100;
+        /* Thin */
+        font-style: normal;
       }
 
       .container {
-         max-width: 768px;
-         padding: 0px 10px;
-         margin: 0 auto;
+        max-width: 768px;
+        padding: 0px 10px;
+        margin: 0 auto;
       }
 
       /* Header Styles */
       .header-container {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         background-color: rgba(0, 40, 104, 1);
-         padding: 10px;
-         color: white;
-         position: fixed;
-         width: 100%;
-         max-width: 768px;
-         top: 0;
-         left: 0;
-         right: 0;
-         margin: 0 auto;
-         z-index: 5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0, 40, 104, 1);
+        padding: 10px;
+        color: white;
+        position: fixed;
+        width: 100%;
+        max-width: 768px;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 5;
       }
 
       .header-left {
-         display: flex;
-         align-items: center;
+        display: flex;
+        align-items: center;
       }
 
       .header-menu-icon {
-         margin-right: 20px;
-         background: none;
-         border: none;
-         font-size: 24px;
-         color: white;
-         cursor: pointer;
+        margin-right: 20px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
       }
 
       .header-logo {
-         display: flex;
+        display: flex;
       }
 
       .header-logo amp-img {
-         display: inline-block;
-         max-width: 40px;
+        display: inline-block;
+        max-width: 40px;
       }
 
       .header-right {
-         display: flex;
-         align-items: center;
-         justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
       }
 
       .header-call-to-action {
-         padding: 10px;
-         border-radius: 5px;
-         font-size: 14px;
-         font-family: "Poppins";
-         font-weight: 400;
-         display: inline-flex;
-         align-items: center;
-         text-decoration: none;
-         color: #fff;
-         background: linear-gradient(97deg, #CD172B 0%, #64000B 100%);
-         font-weight: 600;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 400;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        background: linear-gradient(97deg, #cd172b 0%, #64000b 100%);
+        font-weight: 600;
       }
 
       .header-call-to-action i {
-         margin-right: 8px;
-         font-size: 16px;
-
+        margin-right: 8px;
+        font-size: 16px;
       }
 
       /* -----------------------------------------------header style end  */
       /* -----------------------------------------------sidebar style start */
       amp-sidebar {
-         background-color: #2c3e50;
-         width: 255px;
-         height: 100%;
-         padding: 10px;
+        background-color: #2c3e50;
+        width: 255px;
+        height: 100%;
+        padding: 10px;
       }
 
       .sidebar-menu {
-         margin-top: 20px;
-         list-style: none;
-         padding: 0;
+        margin-top: 20px;
+        list-style: none;
+        padding: 0;
       }
 
       .sidebar-menu li {
-         border-radius: 5px;
-         border-bottom: 1px solid #444;
+        border-radius: 5px;
+        border-bottom: 1px solid #444;
       }
 
       .sidebar-menu li:last-child {
-         border-bottom: none;
+        border-bottom: none;
       }
 
       .sidebar-menu li a {
-         display: flex;
-         align-items: center;
-         padding: 10px;
-         font-size: 18px;
-         font-family: "Poppins";
-         font-weight: 400;
-         text-decoration: none;
-         color: white;
-         line-height: 0;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        font-size: 18px;
+        font-family: "Poppins";
+        font-weight: 400;
+        text-decoration: none;
+        color: white;
+        line-height: 0;
       }
 
       .sidebar-menu li:hover a {
-         background-color: white;
-         border-radius: 5px;
-         background-color: white;
-         border-radius: 5px;
-         color: black;
+        background-color: white;
+        border-radius: 5px;
+        background-color: white;
+        border-radius: 5px;
+        color: black;
       }
 
       .sidebar-menu .icon {
-         width: 20px;
-         height: 20px;
-         display: inline-block;
-         font-size: 20px;
-         text-align: center;
-         line-height: 20px;
-         vertical-align: middle;
-         margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        font-size: 20px;
+        text-align: center;
+        line-height: 20px;
+        vertical-align: middle;
+        margin-right: 10px;
       }
 
       .inventory-items {
-         border: 0px;
-         background: none;
-         padding: 10px;
-         font-size: 18px;
-         font-family: "Poppins";
-         font-weight: 400;
-         border-radius: 5px;
-         color: white;
-         line-height: 0;
+        border: 0px;
+        background: none;
+        padding: 10px;
+        font-size: 18px;
+        font-family: "Poppins";
+        font-weight: 400;
+        border-radius: 5px;
+        color: white;
+        line-height: 0;
       }
 
       .inventory-items:hover {
-         background-color: white;
-         border-radius: 5px;
-         color: black;
+        background-color: white;
+        border-radius: 5px;
+        color: black;
       }
 
       .inventory-items:hover span {
-         color: black;
+        color: black;
       }
 
       .sidebar-logo {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .category-header {
-         margin-top: 5px;
-         display: flex;
-         align-items: center;
-         cursor: pointer;
-         padding: 5px;
-         font-size: 14px;
-         font-family: "Poppins";
-         font-weight: 400;
-         background-color: white;
-         color: black;
-         transition: background-color 0.3s, color 0.3s;
-         border-radius: 5px;
-         font-weight: normal;
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 5px;
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 400;
+        background-color: white;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
+        border-radius: 5px;
+        font-weight: normal;
       }
 
       .category-header i {
-         color: #CD172B;
-         margin-right: 5px;
-         transition: transform 0.3s;
-      }
-
-      .i-amphtml-accordion-header {
-         border: 0px;
+        color: #cd172b;
+        margin-right: 5px;
+        transition: transform 0.3s;
       }
 
       .category-header:hover {
-         background-color: #0056b3;
-         color: white;
+        background-color: #0056b3;
+        color: white;
       }
 
       .category-header:hover i {
-         color: white;
+        color: white;
       }
 
       .category-header[aria-expanded="true"] {
-         background-color: #0056b3;
-         color: #ffffff;
+        background-color: #0056b3;
+        color: #ffffff;
       }
 
       .category-header[aria-expanded="true"] i {
-         transform: rotate(90deg);
-         color: white;
+        transform: rotate(90deg);
+        color: white;
       }
 
       .subcategory {
-         margin-top: 5px;
-         background: white;
-         padding: 5px !important;
-         display: block;
-         max-height: 0;
-         opacity: 0;
-         border-radius: 5px;
-         transition: max-height 0.4s ease, opacity 0.4s ease;
+        margin-top: 5px;
+        background: white;
+        padding: 5px;
+        display: block;
+        max-height: 0;
+        opacity: 0;
+        border-radius: 5px;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
       }
 
       section[expanded] .subcategory {
-         max-height: 300px;
-         opacity: 1;
+        max-height: 300px;
+        opacity: 1;
       }
 
       .subcategory-item {
-         border-radius: 5px;
-         padding: 5px;
-         display: flex;
-         align-items: center;
-         font-size: 12px;
-         font-family: "Poppins";
-         font-weight: 400;
-         color: #555;
-         transition: background-color 0.3s, color 0.3s;
+        border-radius: 5px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-family: "Poppins";
+        font-weight: 400;
+        color: #555;
+        transition: background-color 0.3s, color 0.3s;
       }
 
       .subcategory-item:hover {
-         background-color: #eef;
-         color: #007BFF;
+        background-color: #eef;
+        color: #007bff;
       }
 
       .subcategory-item i {
-         margin-right: 5px;
-         color: #007BFF;
+        margin-right: 5px;
+        color: #007bff;
       }
 
       .subcategory-item span {
-         margin-left: auto;
-         font-size: 12px;
-         font-family: "Poppins";
-         font-weight: 400;
-         color: #888;
+        margin-left: auto;
+        font-size: 12px;
+        font-family: "Poppins";
+        font-weight: 400;
+        color: #888;
       }
 
       .image-container {
-         position: relative;
-         margin-top: 10px;
-         text-align: center;
+        position: relative;
+        margin-top: 10px;
+        text-align: center;
       }
 
       .image-container img {
-         width: 100%;
-         border-radius: 8px;
+        width: 100%;
+        border-radius: 8px;
       }
 
       .view-details {
-         display: inline-block !important;
-         background-color: #CD172B !important;
-         color: #ffffff !important;
-         border-radius: 5px;
-         text-decoration: none;
-         z-index: 1;
-         font-size: 14px !important;
-         font-family: "Poppins";
-         font-weight: 400;
-         position: absolute;
-         bottom: 0;
-         left: 0;
-         right: 0;
+        display: inline-block;
+        background-color: #cd172b;
+        color: #ffffff;
+        border-radius: 5px;
+        text-decoration: none;
+        z-index: 1;
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 400;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
       }
 
       .view-details:hover {
-         background-color: #0056b3;
+        background-color: #0056b3;
       }
 
       .view-details i {
-         margin-left: 8px;
-      }
-
-      .i-amphtml-accordion-content {
-         padding: 10px;
+        margin-left: 8px;
       }
 
       .inventory-items[aria-expanded="true"] {
-         background-color: rgba(0, 86, 179, 0.5);
-         color: #ffffff;
+        background-color: rgba(0, 86, 179, 0.5);
+        color: #ffffff;
       }
 
       /* --------------------------------------------------------------------------------stylebar style end--------------------------  */
       .main-card-section {
-         margin-top: 20px;
-         padding: 15px;
-         background-color: #e5e5e5;
-         border-radius: 5px;
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #e5e5e5;
+        border-radius: 5px;
       }
 
       /* -------------------------------------contactus section start----------------------- */
       .contactus-section {
-         margin-top: 70px;
+        margin-top: 70px;
       }
 
       .contact-info {
-         display: flex;
-         align-items: center;
-         position: relative;
-         text-align: left;
-         color: white;
-         padding: 10px;
-         border-radius: 10px;
-         margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        text-align: left;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 20px;
       }
 
       .contact-info img {
-         width: 100%;
-         height: 300px;
-         border-radius: 10px;
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
       }
 
       .contact-info .img-text {
-         position: absolute;
-         left: 30px;
-         z-index: 2;
+        position: absolute;
+        left: 30px;
+        z-index: 2;
       }
 
       .contact-info .overlay {
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         background-color: rgba(0, 0, 0, 0.3);
-         z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
       }
 
       .contact-info h2 {
-         margin: 0;
-         font-size: 20px;
-         font-family: "Poppins";
-         font-weight: 700;
+        margin: 0;
+        font-size: 20px;
+        font-family: "Poppins";
+        font-weight: 700;
       }
 
       .contact-info p {
-         margin: 5px 0;
-         font-size: 14px;
-         font-family: "Poppins";
-         font-weight: 400;
+        margin: 5px 0;
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 400;
       }
 
       .contact-info a {
-         color: white;
-         text-decoration: none;
+        color: white;
+        text-decoration: none;
       }
 
       /* form style start------------------------------------------- */
       form .form-message {
-         display: none;
+        display: none;
       }
 
       form.amp-form-submit-success [submit-success] {
-         color: #0000ff;
+        color: #0000ff;
       }
 
       form.amp-form-submit-error [submit-error] {
-         color: #dc4e41;
+        color: #dc4e41;
       }
 
       label span {
-         display: block;
-         margin-bottom: 5px;
+        display: block;
+        margin-bottom: 5px;
       }
 
       .login-form input {
-         display: block;
-         margin-top: 20px;
-         padding: 8px;
-         width: 100%;
-         border: solid black 2px;
-         border-radius: 5px;
-         font-size: 14px;
-         font-family: "Poppins";
-         font-weight: 400;
-         background: #e5e5e5;
+        display: block;
+        margin-top: 20px;
+        padding: 8px;
+        width: 100%;
+        border: solid black 2px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 400;
+        background: #e5e5e5;
       }
 
       .login-form button[type="submit"] {
-         margin-top: 10px;
-         width: 100%;
-         background-color: #CD172B;
-         border: none;
-         color: white;
-         padding: 10px;
-         text-align: center;
-         text-decoration: none;
-         display: inline-block;
-         font-size: 14px;
-         font-family: "Poppins";
-         font-weight: 400;
-         font-weight: 600;
-         border-radius: 5px;
-         cursor: pointer;
+        margin-top: 10px;
+        width: 100%;
+        background-color: #cd172b;
+        border: none;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 400;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
       }
 
       .name-input,
@@ -510,768 +580,935 @@
       .address-input,
       .comment-input,
       .zipcode-input {
-         position: relative;
+        position: relative;
       }
 
       [visible-when-invalid] {
-         color: #dc4e41;
-         font-size: 0.9em;
-         font-family: "Poppins";
-         font-weight: 400;
-         position: absolute;
-         bottom: -20px;
+        color: #dc4e41;
+        font-size: 0.9em;
+        font-family: "Poppins";
+        font-weight: 400;
+        position: absolute;
+        bottom: -20px;
       }
 
       .comment-input textarea {
-         display: block;
-         margin-top: 20px;
-         padding: 8px;
-         width: 100%;
-         border: solid black 2px;
-         border-radius: 5px;
-         font-size: 16px;
-         font-family: "Poppins";
-         font-weight: 400;
-         background: #e5e5e5;
-         font-weight: 400;
-         font-family: "Poppins";
+        display: block;
+        margin-top: 20px;
+        padding: 8px;
+        width: 100%;
+        border: solid black 2px;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: "Poppins";
+        font-weight: 400;
+        background: #e5e5e5;
+        font-weight: 400;
+        font-family: "Poppins";
       }
 
       .password-wrapper {
-         position: relative;
-         width: 100%;
+        position: relative;
+        width: 100%;
       }
 
       .password-wrapper input {
-         width: 100%;
-         padding-right: 40px;
+        width: 100%;
+        padding-right: 40px;
       }
 
       .password-wrapper svg {
-         position: absolute;
-         right: 10px;
-         top: 50%;
-         transform: translateY(-50%);
-         cursor: pointer;
-         width: 24px;
-         height: 24px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
       }
 
       .forgot-password {
-         margin-top: 10px;
-         display: flex;
-         justify-content: end;
+        margin-top: 10px;
+        display: flex;
+        justify-content: end;
       }
 
       .forgot-password-content {
-         font-size: 14px;
-         font-family: "Poppins";
-         font-weight: 400;
-         color: #2c2c54;
-         text-decoration: none;
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 400;
+        color: #2c2c54;
+        text-decoration: none;
       }
 
       .create-new-account {
-         margin-top: 10px;
-         font-size: 14px;
-         font-family: "Poppins";
-         font-weight: 400;
+        margin-top: 10px;
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 400;
       }
 
       .create-new-account span {
-         color: #a0a0a0;
+        color: #a0a0a0;
       }
 
       .create-new-account a {
-         color: #2c2c54;
-         text-decoration: none;
+        color: #2c2c54;
+        text-decoration: none;
       }
 
       .create-new-account a:hover {
-         text-decoration: underline;
+        text-decoration: underline;
       }
 
       /* form style end ------------------------------------------ */
       /* ---------------------------------------contactus section end-------------------------------------------- */
       /* ------------------------------------------fotter section start----------------------------------------------------------- */
       footer {
-         background-color: black;
-         max-width: 768px;
-         min-width: 320px;
-         margin: 60px auto 0px auto;
+        background-color: black;
+        max-width: 768px;
+        min-width: 320px;
+        margin: 60px auto 0px auto;
       }
 
       .subscribe-section {
-         width: 90%;
-         background-color: #0a2a66;
-         padding: 20px;
-         position: relative;
-         top: -35px;
-         left: 0;
-         right: 0;
-         margin: 0 auto;
+        width: 90%;
+        background-color: #0a2a66;
+        padding: 20px;
+        position: relative;
+        top: -35px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
       }
 
       .subscribe-section h2 {
-         font-size: 20px;
-         font-family: "Poppins";
-         font-weight: 700;
-         color: #ffffff;
+        font-size: 20px;
+        font-family: "Poppins";
+        font-weight: 700;
+        color: #ffffff;
       }
 
       .subscribe-section p {
-         font-size: 14px;
-         font-family: "Poppins";
-         font-weight: 400;
-         color: #ffffff;
-         margin: 10px 0px;
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 400;
+        color: #ffffff;
+        margin: 10px 0px;
       }
 
       .subscribe-button {
-         text-align: center;
-         display: inline-block;
-         background-color: #3b5998;
-         color: white;
-         padding: 10px;
-         border-radius: 5px;
-         text-decoration: none;
-         font-size: 14px;
-         font-family: "Poppins";
-         font-weight: 700;
+        text-align: center;
+        display: inline-block;
+        background-color: #3b5998;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 700;
       }
 
       .subscribe-button i {
-         margin-right: 8px;
+        margin-right: 8px;
       }
 
       .footer-container {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         padding: 0px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 10px;
       }
 
       .footer-header {
-         display: flex;
-         justify-content: space-between;
-         width: 100%;
-         align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
       }
 
       .footer-header img {
-         height: 50px;
+        height: 50px;
       }
 
       .footer-header .social {
-         display: flex;
-         align-items: center;
+        display: flex;
+        align-items: center;
       }
 
       .footer-header .social span {
-         display: flex;
-         color: #ffffff;
-         font-size: 14px;
-         font-family: "Poppins";
-         font-weight: 700;
+        display: flex;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 700;
       }
 
       .footer-header .social a {
-         display: flex;
-         color: #ffffff;
-         margin-left: 10px;
-         text-decoration: none;
-         font-size: 14px;
-         font-family: "Poppins";
-         font-weight: 400;
+        display: flex;
+        color: #ffffff;
+        margin-left: 10px;
+        text-decoration: none;
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 400;
       }
 
       .footer-content {
-         width: 100%;
-         display: flex;
-         flex-wrap: wrap;
-         justify-content: space-between;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
       }
 
       .footer-content .column h3 {
-         margin: 10px 0px;
-         color: #ffffff;
-         font-size: 14px;
-         font-family: "Poppins";
-         font-weight: 700;
+        margin: 10px 0px;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 700;
       }
 
       .footer-content .column ul {
-         list-style: none;
-         padding: 0;
+        list-style: none;
+        padding: 0;
       }
 
       .footer-content .column ul li a {
-         font-size: 12px;
-         font-family: "Poppins";
-         font-weight: 400;
-         color: #ffffff;
-         text-decoration: none;
+        font-size: 12px;
+        font-family: "Poppins";
+        font-weight: 400;
+        color: #ffffff;
+        text-decoration: none;
       }
 
       .latest-offers {
-         display: flex;
-         flex-wrap: wrap;
-         gap: 10px;
-         margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
       }
 
       .latest-offer-column {
-         width: 100% !important;
+        width: 100%;
       }
 
       .latest-offers amp-img {
-         width: 100px;
-         height: 100px;
-         object-fit: cover;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
       }
 
       .footer {
-         text-align: center;
-         margin-top: 20px;
-         padding: 10px 0;
-         border-top: 1px solid #ffffff;
-         width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px 0;
+        border-top: 1px solid #ffffff;
+        width: 100%;
       }
 
       .footer p {
-         color: #ffffff;
-         font-size: 12px;
-         font-family: "Poppins";
-         font-weight: 400;
-         margin: 5px 0;
+        color: #ffffff;
+        font-size: 12px;
+        font-family: "Poppins";
+        font-weight: 400;
+        margin: 5px 0;
       }
 
       .footer p a {
-         color: #ffffff;
-         text-decoration: none;
+        color: #ffffff;
+        text-decoration: none;
       }
 
       /* ------------------------------------------fotter section end----------------------------------------------------------- */
       @media (max-width: 640px) {
-         .image-section {
-            height: 110px;
-         }
+        .image-section {
+          height: 110px;
+        }
 
-         .equipment-header amp-img {
-            height: 250px !important;
-         }
+        .equipment-header amp-img {
+          height: 250px;
+        }
 
-         .equipment-header .header-overlay {
-            padding: 10px;
-         }
+        .equipment-header .header-overlay {
+          padding: 10px;
+        }
 
-         .card {
-            width: 240px;
-         }
+        .card {
+          width: 240px;
+        }
 
-         .equipment-header .header-overlay div p {
-            font-size: 12px;
-            font-family: "Poppins";
-            font-weight: 400;
-         }
+        .equipment-header .header-overlay div p {
+          font-size: 12px;
+          font-family: "Poppins";
+          font-weight: 400;
+        }
 
-         .services-card-container {
-            flex-direction: column;
-         }
+        .services-card-container {
+          flex-direction: column;
+        }
 
-         .service-card {
-            width: 100%;
-         }
+        .service-card {
+          width: 100%;
+        }
 
-         .footer-content .column {
-            width: 50%;
-         }
+        .footer-content .column {
+          width: 50%;
+        }
 
-         .latest-offers-column {
-            width: 100% !important;
-         }
+        .latest-offers-column {
+          width: 100%;
+        }
 
-         .card {
-            width: 200px;
-         }
+        .card {
+          width: 200px;
+        }
       }
 
       @media (max-width: 575px) {
-         .header-menu-icon {
-            margin-right: 10px;
-         }
+        .header-menu-icon {
+          margin-right: 10px;
+        }
 
-         .header-call-to-action i {
-            margin-right: 5px;
-         }
+        .header-call-to-action i {
+          margin-right: 5px;
+        }
 
-         .contact-info img {
+        .contact-info img {
+          height: 250px;
+        }
 
-            height: 250px;
+        .contact-info h2 {
+          font-size: 20px;
+          font-family: "Poppins";
+          font-weight: 700;
+        }
 
-         }
-
-         .contact-info h2 {
-
-            font-size: 20px;
-            font-family: "Poppins";
-            font-weight: 700;
-         }
-
-         .subscribe-section h2 {
-            font-size: 18px;
-            font-family: "Poppins";
-            font-weight: 700;
-         }
+        .subscribe-section h2 {
+          font-size: 18px;
+          font-family: "Poppins";
+          font-weight: 700;
+        }
       }
-
-
-
-
 
       @media (max-width: 340px) {
-         .header-call-to-action {
-            padding: 8px;
-            font-size: 12px;
-            font-family: "Poppins";
-            font-weight: 600;
-         }
+        .header-call-to-action {
+          padding: 8px;
+          font-size: 12px;
+          font-family: "Poppins";
+          font-weight: 600;
+        }
 
-         .main-card-section {
-            padding: 10px;
-         }
+        .main-card-section {
+          padding: 10px;
+        }
 
-         .contact-info h2 {
+        .contact-info h2 {
+          font-size: 16px;
+          font-family: "Poppins";
+          font-weight: 700;
+        }
 
-            font-size: 16px;
-            font-family: "Poppins";
-            font-weight: 700;
-         }
+        .contact-info .img-text {
+          left: 15px;
+          padding: 4px;
+        }
 
-         .contact-info .img-text {
-            left: 15px;
-            padding: 4px;
-         }
+        .contact-info img {
+          height: 220px;
+        }
 
-         .contact-info img {
-            height: 220px;
-         }
+        .subscribe-section {
+          padding: 10px;
+        }
 
-         .subscribe-section {
-            padding: 10px;
-         }
-
-         .subscribe-section h2 {
-            font-size: 16px;
-            font-family: "Poppins";
-            font-weight: 700;
-         }
+        .subscribe-section h2 {
+          font-size: 16px;
+          font-family: "Poppins";
+          font-weight: 700;
+        }
       }
-   </style>
-   <script async src="https://cdn.ampproject.org/v0.js"></script>
-</head>
+    </style>
+  </head>
 
-<body>
-   <!-- Header start -->
-   <header class="header-container">
+  <body>
+    <!-- Header start -->
+    <header class="header-container">
       <div class="header-left">
-         <button on="tap:sidebar.toggle" class="header-menu-icon">
-            <span>☰</span>
-         </button>
-         <a href="#" class="header-logo">
-            <amp-img src="https://nleq.com/images/nleq-logo.png" alt="Logo" width="50" height="50"
-               layout="intrinsic"></amp-img>
-         </a>
+        <button on="tap:sidebar.toggle" class="header-menu-icon">
+          <span>☰</span>
+        </button>
+        <a href="#" class="header-logo">
+          <amp-img
+            src="https://nleq.com/images/nleq-logo.png"
+            alt="Logo"
+            width="50"
+            height="50"
+            layout="intrinsic"
+          ></amp-img>
+        </a>
       </div>
       <div class="header-right">
-         <a class="header-call-to-action" href="tel:8004247625">
-            <i class="fas fa-phone-alt"></i> Call Us (800) 424-7625
-         </a>
+        <a class="header-call-to-action" href="tel:8004247625">
+          <i class="fas fa-phone-alt"></i> Call Us (800) 424-7625
+        </a>
       </div>
-   </header>
-   <!-- Header end -->
-   <!-- Sidebar start -->
-   <amp-sidebar id="sidebar" layout="nodisplay" side="left">
+    </header>
+    <!-- Header end -->
+    <!-- Sidebar start -->
+    <amp-sidebar id="sidebar" layout="nodisplay" side="left">
       <div class="sidebar-logo">
-         <button on="tap:sidebar.toggle" class="header-menu-icon">
-            <span>x</span>
-         </button>
-         <a href="#" class="header-logo">
-            <amp-img src="https://nleq.com/images/nleq-logo.png" alt="Logo" width="40" height="40"
-               layout="intrinsic"></amp-img>
-         </a>
+        <button on="tap:sidebar.toggle" class="header-menu-icon">
+          <span>x</span>
+        </button>
+        <a href="#" class="header-logo">
+          <amp-img
+            src="https://nleq.com/images/nleq-logo.png"
+            alt="Logo"
+            width="40"
+            height="40"
+            layout="intrinsic"
+          ></amp-img>
+        </a>
       </div>
       <ul class="sidebar-menu">
-         <li><a href="index.html"><i class="fas fa-home icon"></i> Home</a></li>
-         <li>
-            <amp-accordion>
-               <section>
-                  <span class="inventory-items"><i class="fas fa-clipboard-list icon"></i>Inventory</span>
-                  <ul>
-                     <amp-accordion expand-single-section>
-                        <section>
-                           <h2 class="category-header">
-                              <i class="fas fa-chevron-right"></i> Boom Lifts
-                           </h2>
-                           <div class="subcategory">
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrow-up"></i> Articulating Boom Lift
-                                 <span>(211)</span>
-                              </div>
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrow-right"></i> Straight Boom Lift
-                                 <span>(249)</span>
-                              </div>
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrow-down"></i> Towable Boom Lift
-                                 <span>(34)</span>
-                              </div>
-                           </div>
-                        </section>
-                        <section>
-                           <h2 class="category-header">
-                              <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
-                           </h2>
-                           <div class="subcategory">
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrows-alt-v"></i> Scissor Lift
-                                 <span>(150)</span>
-                              </div>
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrows-alt-h"></i> Mast Lift
-                                 <span>(75)</span>
-                              </div>
-                           </div>
-                        </section>
-                        <section>
-                           <h2 class="category-header">
-                              <i class="fas fa-chevron-right"></i> Boom Lifts
-                           </h2>
-                           <div class="subcategory">
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrow-up"></i> Articulating Boom Lift
-                                 <span>(211)</span>
-                              </div>
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrow-right"></i> Straight Boom Lift
-                                 <span>(249)</span>
-                              </div>
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrow-down"></i> Towable Boom Lift
-                                 <span>(34)</span>
-                              </div>
-                           </div>
-                        </section>
-                        <section>
-                           <h2 class="category-header">
-                              <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
-                           </h2>
-                           <div class="subcategory">
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrows-alt-v"></i> Scissor Lift
-                                 <span>(150)</span>
-                              </div>
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrows-alt-h"></i> Mast Lift
-                                 <span>(75)</span>
-                              </div>
-                           </div>
-                        </section>
-                        <section>
-                           <h2 class="category-header">
-                              <i class="fas fa-chevron-right"></i> Boom Lifts
-                           </h2>
-                           <div class="subcategory">
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrow-up"></i> Articulating Boom Lift
-                                 <span>(211)</span>
-                              </div>
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrow-right"></i> Straight Boom Lift
-                                 <span>(249)</span>
-                              </div>
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrow-down"></i> Towable Boom Lift
-                                 <span>(34)</span>
-                              </div>
-                           </div>
-                        </section>
-                        <section>
-                           <h2 class="category-header">
-                              <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
-                           </h2>
-                           <div class="subcategory">
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrows-alt-v"></i> Scissor Lift
-                                 <span>(150)</span>
-                              </div>
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrows-alt-h"></i> Mast Lift
-                                 <span>(75)</span>
-                              </div>
-                           </div>
-                        </section>
-                        <section>
-                           <h2 class="category-header">
-                              <i class="fas fa-chevron-right"></i> Boom Lifts
-                           </h2>
-                           <div class="subcategory">
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrow-up"></i> Articulating Boom Lift
-                                 <span>(211)</span>
-                              </div>
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrow-right"></i> Straight Boom Lift
-                                 <span>(249)</span>
-                              </div>
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrow-down"></i> Towable Boom Lift
-                                 <span>(34)</span>
-                              </div>
-                           </div>
-                        </section>
-                        <section>
-                           <h2 class="category-header">
-                              <i class="fas fa-chevron-right"></i> Scissor &amp; Mast Lifts
-                           </h2>
-                           <div class="subcategory">
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrows-alt-v"></i> Scissor Lift
-                                 <span>(150)</span>
-                              </div>
-                              <div class="subcategory-item">
-                                 <i class="fas fa-arrows-alt-h"></i> Mast Lift
-                                 <span>(75)</span>
-                              </div>
-                           </div>
-                        </section>
-                     </amp-accordion>
-                     <div class="image-container">
-                        <amp-img alt="Boom lifts in a yard"
-                           src="https://storage.googleapis.com/a1aa/image/2YyBSkOZxOpVLREemffRfe4o8xHtTLhnuuDC1Dc9FncmTfgeJA.jpg"
-                           width="300" height="200" layout="responsive">
-                        </amp-img>
-                        <a class="view-details" href="#">View Details <i class="fas fa-arrow-right"></i></a>
-                     </div>
-                     <div class="image-container">
-                        <amp-img alt="Boom lifts in a yard"
-                           src="https://storage.googleapis.com/a1aa/image/2YyBSkOZxOpVLREemffRfe4o8xHtTLhnuuDC1Dc9FncmTfgeJA.jpg"
-                           width="300" height="200" layout="responsive">
-                        </amp-img>
-                        <a class="view-details" href="#">View Details <i class="fas fa-arrow-right"></i></a>
-                     </div>
-                  </ul>
-               </section>
-            </amp-accordion>
-         </li>
-         <li><a href="aboutus.html"><i class="fas fa-info-circle icon"></i> About Us</a></li>
-         <li><a href="alert.html"><i class="fas fa-bell icon"></i> Alerts</a></li>
-         <li><a href="contactus.html"><i class="fas fa-envelope icon"></i> Contact Us</a></li>
+        <li>
+          <a href="index.html"><i class="fas fa-home icon"></i> Home</a>
+        </li>
+        <li>
+          <amp-accordion>
+            <section>
+              <h1 class="inventory-items">
+                <i class="fas fa-clipboard-list icon"></i>Inventory
+              </h1>
+              <ul>
+                <amp-accordion expand-single-section>
+                  <section>
+                    <h2 class="category-header">
+                      <i class="fas fa-chevron-right"></i> Boom Lifts
+                    </h2>
+                    <div class="subcategory">
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrow-up"></i> Articulating Boom Lift
+                        <span>(211)</span>
+                      </div>
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrow-right"></i> Straight Boom Lift
+                        <span>(249)</span>
+                      </div>
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrow-down"></i> Towable Boom Lift
+                        <span>(34)</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section>
+                    <h2 class="category-header">
+                      <i class="fas fa-chevron-right"></i> Scissor &amp; Mast
+                      Lifts
+                    </h2>
+                    <div class="subcategory">
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrows-alt-v"></i> Scissor Lift
+                        <span>(150)</span>
+                      </div>
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrows-alt-h"></i> Mast Lift
+                        <span>(75)</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section>
+                    <h2 class="category-header">
+                      <i class="fas fa-chevron-right"></i> Boom Lifts
+                    </h2>
+                    <div class="subcategory">
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrow-up"></i> Articulating Boom Lift
+                        <span>(211)</span>
+                      </div>
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrow-right"></i> Straight Boom Lift
+                        <span>(249)</span>
+                      </div>
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrow-down"></i> Towable Boom Lift
+                        <span>(34)</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section>
+                    <h2 class="category-header">
+                      <i class="fas fa-chevron-right"></i> Scissor &amp; Mast
+                      Lifts
+                    </h2>
+                    <div class="subcategory">
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrows-alt-v"></i> Scissor Lift
+                        <span>(150)</span>
+                      </div>
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrows-alt-h"></i> Mast Lift
+                        <span>(75)</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section>
+                    <h2 class="category-header">
+                      <i class="fas fa-chevron-right"></i> Boom Lifts
+                    </h2>
+                    <div class="subcategory">
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrow-up"></i> Articulating Boom Lift
+                        <span>(211)</span>
+                      </div>
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrow-right"></i> Straight Boom Lift
+                        <span>(249)</span>
+                      </div>
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrow-down"></i> Towable Boom Lift
+                        <span>(34)</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section>
+                    <h2 class="category-header">
+                      <i class="fas fa-chevron-right"></i> Scissor &amp; Mast
+                      Lifts
+                    </h2>
+                    <div class="subcategory">
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrows-alt-v"></i> Scissor Lift
+                        <span>(150)</span>
+                      </div>
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrows-alt-h"></i> Mast Lift
+                        <span>(75)</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section>
+                    <h2 class="category-header">
+                      <i class="fas fa-chevron-right"></i> Boom Lifts
+                    </h2>
+                    <div class="subcategory">
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrow-up"></i> Articulating Boom Lift
+                        <span>(211)</span>
+                      </div>
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrow-right"></i> Straight Boom Lift
+                        <span>(249)</span>
+                      </div>
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrow-down"></i> Towable Boom Lift
+                        <span>(34)</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section>
+                    <h2 class="category-header">
+                      <i class="fas fa-chevron-right"></i> Scissor &amp; Mast
+                      Lifts
+                    </h2>
+                    <div class="subcategory">
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrows-alt-v"></i> Scissor Lift
+                        <span>(150)</span>
+                      </div>
+                      <div class="subcategory-item">
+                        <i class="fas fa-arrows-alt-h"></i> Mast Lift
+                        <span>(75)</span>
+                      </div>
+                    </div>
+                  </section>
+                </amp-accordion>
+                <div class="image-container">
+                  <amp-img
+                    alt="Boom lifts in a yard"
+                    src="https://storage.googleapis.com/a1aa/image/2YyBSkOZxOpVLREemffRfe4o8xHtTLhnuuDC1Dc9FncmTfgeJA.jpg"
+                    width="300"
+                    height="200"
+                    layout="responsive"
+                  >
+                  </amp-img>
+                  <a class="view-details" href="#"
+                    >View Details <i class="fas fa-arrow-right"></i
+                  ></a>
+                </div>
+                <div class="image-container">
+                  <amp-img
+                    alt="Boom lifts in a yard"
+                    src="https://storage.googleapis.com/a1aa/image/2YyBSkOZxOpVLREemffRfe4o8xHtTLhnuuDC1Dc9FncmTfgeJA.jpg"
+                    width="300"
+                    height="200"
+                    layout="responsive"
+                  >
+                  </amp-img>
+                  <a class="view-details" href="#"
+                    >View Details <i class="fas fa-arrow-right"></i
+                  ></a>
+                </div>
+              </ul>
+            </section>
+          </amp-accordion>
+        </li>
+        <li>
+          <a href="aboutus.html"
+            ><i class="fas fa-info-circle icon"></i> About Us</a
+          >
+        </li>
+        <li>
+          <a href="alert.html"><i class="fas fa-bell icon"></i> Alerts</a>
+        </li>
+        <li>
+          <a href="contactus.html"
+            ><i class="fas fa-envelope icon"></i> Contact Us</a
+          >
+        </li>
       </ul>
-   </amp-sidebar>
-   <!-- Sidebar end -->
-   <main>
+    </amp-sidebar>
+    <!-- Sidebar end -->
+    <main>
       <!--------------------------- contactus-section start ------------------>
       <div class="contactus-section">
-         <div class="container">
-            <div class="main-card-section">
-               <div class="contact-info">
-                  <img alt="Background image of construction equipment"
-                     src="https://storage.googleapis.com/a1aa/image/QAcmsRN7PSZEMNV5LPGu61ZbJ325X6g9s1pf5FacrtS5gMBKA.jpg"
-                     width="300">
-                  <div class="overlay"></div>
-                  <div class="img-text">
-                     <h2>Contact Information</h2>
-                     <p><strong>Phone</strong><br>(800) 424-7625<br>(215) 788-2620</p>
-                     <p><strong>Mailing Address</strong><br>5085 Bristol Pike 2nd Floor Bristol, PA 19007 USA</p>
-                     <p><strong>Email</strong><br><a href="mailto:sales@nleq.com">sales@nleq.com</a></p>
-                  </div>
-               </div>
-               <form class="login-form" method="post" action-xhr="/form/echo-json/post" target="_blank"
-                  custom-validation-reporting="interact-and-submit">
-                  <!-- Name Field -->
-                  <div class="name-input">
-                     <input type="text" name="name" id="name" required minlength="3" maxlength="50"
-                        placeholder="User Name">
-                     <span visible-when-invalid="valueMissing" validation-for="name">
-                        Name is required.
-                     </span>
-                     <span visible-when-invalid="tooShort" validation-for="name">
-                        Name must be at least 3 characters long.
-                     </span>
-                     <span visible-when-invalid="tooLong" validation-for="name">
-                        Name must be less than 50 characters long.
-                     </span>
-                  </div>
-                  <!-- Email Field -->
-                  <div class="email-input">
-                     <input type="email" name="email" id="email" required placeholder="Email Address">
-                     <span visible-when-invalid="valueMissing" validation-for="email">
-                        Email is required.
-                     </span>
-                     <span visible-when-invalid="typeMismatch" validation-for="email">
-                        Please enter a valid email address.
-                     </span>
-                  </div>
-                  <!-- Title Field -->
-                  <div class="title-input">
-                     <input type="text" name="title" id="title" required maxlength="100" placeholder="Title">
-                     <span visible-when-invalid="valueMissing" validation-for="title">
-                        Title is required.
-                     </span>
-                     <span visible-when-invalid="tooLong" validation-for="title">
-                        Title must be less than 100 characters long.
-                     </span>
-                  </div>
-                  <!-- Phone Number Field -->
-                  <div class="phone-input">
-                     <input type="tel" name="phone" id="phone" required pattern="[0-9]{10}"
-                        placeholder="Phone Number (10 digits)">
-                     <span visible-when-invalid="valueMissing" validation-for="phone">
-                        Phone number is required.
-                     </span>
-                     <span visible-when-invalid="patternMismatch" validation-for="phone">
-                        Please enter a valid 10-digit phone number.
-                     </span>
-                  </div>
-
-                  <!-- street adress Field -->
-                  <div class="address-input">
-                     <input type="text" name="address" id="address" required placeholder="Street Address">
-                     <span visible-when-invalid="valueMissing" validation-for="address">
-                        Street Address is required.
-                     </span>
-                  </div>
-
-                  <!-- state Field -->
-                  <div class="state-input">
-                     <input type="text" name="state" id="state" required placeholder="State">
-                     <span visible-when-invalid="valueMissing" validation-for="state">
-                        State is required.
-
-                     </span>
-                  </div>
-                  <!-- City Field -->
-                  <div class="city-input">
-                     <input type="text" name="city" id="city" required placeholder="City">
-                     <span visible-when-invalid="valueMissing" validation-for="city">
-                        City is required.
-                     </span>
-                  </div>
-                  <!-- Zip Code Field -->
-                  <div class="zipcode-input">
-                     <input type="text" name="zipcode" id="zipcode" required pattern="[0-9]{5}"
-                        placeholder="Zip Code (5 digits)">
-                     <span visible-when-invalid="valueMissing" validation-for="zipcode">
-                        Zip code is required.
-                     </span>
-                     <span visible-when-invalid="patternMismatch" validation-for="zipcode">
-                        Please enter a valid 5-digit zip code.
-                     </span>
-                  </div>
-                  <!-- Comment Section -->
-                  <div class="comment-input">
-                     <textarea name="comment" id="comment" required minlength="10" maxlength="500"
-                        placeholder="Your comment here (10-500 characters)"></textarea>
-
-                  </div>
-                  <!-- Submit Button -->
-                  <button type="submit">Submit</button>
-               </form>
+        <div class="container">
+          <div class="main-card-section">
+            <div class="contact-info">
+              <img
+                alt="Background image of construction equipment"
+                src="https://storage.googleapis.com/a1aa/image/QAcmsRN7PSZEMNV5LPGu61ZbJ325X6g9s1pf5FacrtS5gMBKA.jpg"
+                width="300"
+              />
+              <div class="overlay"></div>
+              <div class="img-text">
+                <h2>Contact Information</h2>
+                <p>
+                  <strong>Phone</strong><br />(800) 424-7625<br />(215) 788-2620
+                </p>
+                <p>
+                  <strong>Mailing Address</strong><br />5085 Bristol Pike 2nd
+                  Floor Bristol, PA 19007 USA
+                </p>
+                <p>
+                  <strong>Email</strong><br /><a href="mailto:sales@nleq.com"
+                    >sales@nleq.com</a
+                  >
+                </p>
+              </div>
             </div>
-         </div>
+            <form
+              class="login-form"
+              method="post"
+              action-xhr="/form/echo-json/post"
+              target="_blank"
+              custom-validation-reporting="interact-and-submit"
+            >
+              <!-- Name Field -->
+              <div class="name-input">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  minlength="3"
+                  maxlength="50"
+                  placeholder="User Name"
+                />
+                <span visible-when-invalid="valueMissing" validation-for="name">
+                  Name is required.
+                </span>
+                <span visible-when-invalid="tooShort" validation-for="name">
+                  Name must be at least 3 characters long.
+                </span>
+                <span visible-when-invalid="tooLong" validation-for="name">
+                  Name must be less than 50 characters long.
+                </span>
+              </div>
+              <!-- Email Field -->
+              <div class="email-input">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  placeholder="Email Address"
+                />
+                <span
+                  visible-when-invalid="valueMissing"
+                  validation-for="email"
+                >
+                  Email is required.
+                </span>
+                <span
+                  visible-when-invalid="typeMismatch"
+                  validation-for="email"
+                >
+                  Please enter a valid email address.
+                </span>
+              </div>
+              <!-- Title Field -->
+              <div class="title-input">
+                <input
+                  type="text"
+                  name="title"
+                  id="title"
+                  required
+                  maxlength="100"
+                  placeholder="Title"
+                />
+                <span
+                  visible-when-invalid="valueMissing"
+                  validation-for="title"
+                >
+                  Title is required.
+                </span>
+                <span visible-when-invalid="tooLong" validation-for="title">
+                  Title must be less than 100 characters long.
+                </span>
+              </div>
+              <!-- Phone Number Field -->
+              <div class="phone-input">
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  required
+                  pattern="[0-9]{10}"
+                  placeholder="Phone Number (10 digits)"
+                />
+                <span
+                  visible-when-invalid="valueMissing"
+                  validation-for="phone"
+                >
+                  Phone number is required.
+                </span>
+                <span
+                  visible-when-invalid="patternMismatch"
+                  validation-for="phone"
+                >
+                  Please enter a valid 10-digit phone number.
+                </span>
+              </div>
+
+              <!-- street adress Field -->
+              <div class="address-input">
+                <input
+                  type="text"
+                  name="address"
+                  id="address"
+                  required
+                  placeholder="Street Address"
+                />
+                <span
+                  visible-when-invalid="valueMissing"
+                  validation-for="address"
+                >
+                  Street Address is required.
+                </span>
+              </div>
+
+              <!-- state Field -->
+              <div class="state-input">
+                <input
+                  type="text"
+                  name="state"
+                  id="state"
+                  required
+                  placeholder="State"
+                />
+                <span
+                  visible-when-invalid="valueMissing"
+                  validation-for="state"
+                >
+                  State is required.
+                </span>
+              </div>
+              <!-- City Field -->
+              <div class="city-input">
+                <input
+                  type="text"
+                  name="city"
+                  id="city"
+                  required
+                  placeholder="City"
+                />
+                <span visible-when-invalid="valueMissing" validation-for="city">
+                  City is required.
+                </span>
+              </div>
+              <!-- Zip Code Field -->
+              <div class="zipcode-input">
+                <input
+                  type="text"
+                  name="zipcode"
+                  id="zipcode"
+                  required
+                  pattern="[0-9]{5}"
+                  placeholder="Zip Code (5 digits)"
+                />
+                <span
+                  visible-when-invalid="valueMissing"
+                  validation-for="zipcode"
+                >
+                  Zip code is required.
+                </span>
+                <span
+                  visible-when-invalid="patternMismatch"
+                  validation-for="zipcode"
+                >
+                  Please enter a valid 5-digit zip code.
+                </span>
+              </div>
+              <!-- Comment Section -->
+              <div class="comment-input">
+                <textarea
+                  name="comment"
+                  id="comment"
+                  required
+                  minlength="10"
+                  maxlength="500"
+                  placeholder="Your comment here (10-500 characters)"
+                ></textarea>
+              </div>
+              <!-- Submit Button -->
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
       </div>
       <!--------------------------- contactus-section end ------------------>
-   </main>
-   <!-- footer Section start -->
-   <footer>
+    </main>
+    <!-- footer Section start -->
+    <footer>
       <div class="subscribe-section">
-         <h2>Get Latest Updates & Offers</h2>
-         <p>Sign up to receive exclusive updates, offers, and insights directly to your inbox.</p>
-         <a href="#" class="subscribe-button">
-            <i class="fas fa-envelope"></i> Subscribe
-         </a>
+        <h2>Get Latest Updates & Offers</h2>
+        <p>
+          Sign up to receive exclusive updates, offers, and insights directly to
+          your inbox.
+        </p>
+        <a href="#" class="subscribe-button">
+          <i class="fas fa-envelope"></i> Subscribe
+        </a>
       </div>
       <div class="footer-container">
-         <div class="footer-header">
-            <a href="#">
-               <amp-img src="https://nleq.com/images//nleq-logo.png" alt="Logo" width="200" height="200"
-                  layout="intrinsic"></amp-img>
+        <div class="footer-header">
+          <a href="#">
+            <amp-img
+              src="https://nleq.com/images//nleq-logo.png"
+              alt="Logo"
+              width="200"
+              height="200"
+              layout="intrinsic"
+            ></amp-img>
+          </a>
+          <div class="social">
+            <span>Follow us on</span>
+            <a href="https://www.facebook.com/NationalLiftEquipment/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 14.363 9.579"
+              >
+                <path
+                  id="arrow_drk"
+                  data-name="arrow drk"
+                  d="M17.034,11.435a.652.652,0,0,0,0,.918l3.033,3.038H8.519a.649.649,0,0,0,0,1.3H20.058l-3.033,3.038a.657.657,0,0,0,0,.918.646.646,0,0,0,.913,0L22.053,16.5h0a.728.728,0,0,0,.135-.2.619.619,0,0,0,.05-.249.65.65,0,0,0-.185-.454L17.942,11.45A.636.636,0,0,0,17.034,11.435Z"
+                  transform="translate(-7.875 -11.252)"
+                  fill="white"
+                ></path>
+              </svg>
             </a>
-            <div class="social">
-               <span>Follow us on</span>
-               <a href="https://www.facebook.com/NationalLiftEquipment/">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 14.363 9.579">
-                     <path id="arrow_drk" data-name="arrow drk"
-                        d="M17.034,11.435a.652.652,0,0,0,0,.918l3.033,3.038H8.519a.649.649,0,0,0,0,1.3H20.058l-3.033,3.038a.657.657,0,0,0,0,.918.646.646,0,0,0,.913,0L22.053,16.5h0a.728.728,0,0,0,.135-.2.619.619,0,0,0,.05-.249.65.65,0,0,0-.185-.454L17.942,11.45A.636.636,0,0,0,17.034,11.435Z"
-                        transform="translate(-7.875 -11.252)" fill="white"></path>
-                  </svg>
-               </a>
-               <a href="https://www.facebook.com/NationalLiftEquipment/">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40"
-                     aria-label="Facebook">
-                     <rect width="40" height="40" fill="white" rx="20" />
-                     <g transform="translate(-61 -487)">
-                        <path
-                           d="M9.874,9.288,10.332,6.3H7.465V4.361A1.494,1.494,0,0,1,9.15,2.746h1.3V.2A15.9,15.9,0,0,0,8.139,0a3.648,3.648,0,0,0-3.9,4.022V6.3H1.609V9.288H4.234v7.224H7.465V9.288Z"
-                           transform="translate(75.391 499)" fill="#002868"></path>
-                     </g>
-                  </svg>
-               </a>
+            <a href="https://www.facebook.com/NationalLiftEquipment/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 40 40"
+                aria-label="Facebook"
+              >
+                <rect width="40" height="40" fill="white" rx="20" />
+                <g transform="translate(-61 -487)">
+                  <path
+                    d="M9.874,9.288,10.332,6.3H7.465V4.361A1.494,1.494,0,0,1,9.15,2.746h1.3V.2A15.9,15.9,0,0,0,8.139,0a3.648,3.648,0,0,0-3.9,4.022V6.3H1.609V9.288H4.234v7.224H7.465V9.288Z"
+                    transform="translate(75.391 499)"
+                    fill="#002868"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-content">
+          <div class="column">
+            <h3>Equipment Type</h3>
+            <ul>
+              <li><a href="#">All Used Vehicles</a></li>
+              <li><a href="#">Boom Lifts</a></li>
+              <li><a href="#">Scissor &amp; Mast Lifts</a></li>
+              <li><a href="#">Compact Lifts</a></li>
+              <li><a href="#">Material Handling</a></li>
+              <li><a href="#">Cranes</a></li>
+              <li><a href="#">Earth Moving Equipment</a></li>
+              <li><a href="#">Power, Lighting, &amp; Air</a></li>
+              <li><a href="#">Other</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Alerts</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="column latest-offers-column">
+            <h3>Latest Offers</h3>
+            <div class="latest-offers">
+              <amp-img
+                alt="Offer 1"
+                height="100"
+                width="100"
+                src="https://storage.googleapis.com/a1aa/image/agKQf6pqp80EaShEYnNDfeV6xFLdseMUD5ACcecAECBAheReJA.jpg"
+              >
+              </amp-img>
+              <amp-img
+                alt="Offer 2"
+                height="100"
+                width="100"
+                src="https://storage.googleapis.com/a1aa/image/i8DGtRq7KzoaFpjVy2uIccLVQwvcFD13x0OBtQul7B9B9ReJA.jpg"
+              >
+              </amp-img>
             </div>
-         </div>
-         <div class="footer-content">
-            <div class="column">
-               <h3>Equipment Type</h3>
-               <ul>
-                  <li><a href="#">All Used Vehicles</a></li>
-                  <li><a href="#">Boom Lifts</a></li>
-                  <li><a href="#">Scissor &amp; Mast Lifts</a></li>
-                  <li><a href="#">Compact Lifts</a></li>
-                  <li><a href="#">Material Handling</a></li>
-                  <li><a href="#">Cranes</a></li>
-                  <li><a href="#">Earth Moving Equipment</a></li>
-                  <li><a href="#">Power, Lighting, &amp; Air</a></li>
-                  <li><a href="#">Other</a></li>
-               </ul>
+            <div class="latest-offers">
+              <amp-img
+                alt="Offer 3"
+                height="100"
+                width="100"
+                src="https://storage.googleapis.com/a1aa/image/NBVNN7oEaCbZBpX2ZIWiZv6FyO3YVI9RKWG6TvVSf32E6j8JA.jpg"
+              >
+              </amp-img>
+              <amp-img
+                alt="Offer 4"
+                height="100"
+                width="100"
+                src="https://storage.googleapis.com/a1aa/image/e5Yecf96jOBp3JhOll1HzIrvwBKorjmCyLMLW8dcJnwNoPynA.jpg"
+              >
+              </amp-img>
             </div>
-            <div class="column">
-               <h3>Quick Links</h3>
-               <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Alerts</a></li>
-                  <li><a href="#">Contact Us</a></li>
-               </ul>
-            </div>
-            <div class="column latest-offers-column">
-               <h3>Latest Offers</h3>
-               <div class="latest-offers">
-                  <amp-img alt="Offer 1" height="100" width="100"
-                     src="https://storage.googleapis.com/a1aa/image/agKQf6pqp80EaShEYnNDfeV6xFLdseMUD5ACcecAECBAheReJA.jpg">
-                  </amp-img>
-                  <amp-img alt="Offer 2" height="100" width="100"
-                     src="https://storage.googleapis.com/a1aa/image/i8DGtRq7KzoaFpjVy2uIccLVQwvcFD13x0OBtQul7B9B9ReJA.jpg">
-                  </amp-img>
-               </div>
-               <div class="latest-offers">
-                  <amp-img alt="Offer 3" height="100" width="100"
-                     src="https://storage.googleapis.com/a1aa/image/NBVNN7oEaCbZBpX2ZIWiZv6FyO3YVI9RKWG6TvVSf32E6j8JA.jpg">
-                  </amp-img>
-                  <amp-img alt="Offer 4" height="100" width="100"
-                     src="https://storage.googleapis.com/a1aa/image/e5Yecf96jOBp3JhOll1HzIrvwBKorjmCyLMLW8dcJnwNoPynA.jpg">
-                  </amp-img>
-               </div>
-            </div>
-         </div>
-         <div class="footer">
-            <p>National Lift Equipment © 2024. All Rights Reserved</p>
-            <p><a href="#">Terms of use</a></p>
-            <p><a href="#">Privacy Policy</a></p>
-         </div>
+          </div>
+        </div>
+        <div class="footer">
+          <p>National Lift Equipment © 2024. All Rights Reserved</p>
+          <p><a href="#">Terms of use</a></p>
+          <p><a href="#">Privacy Policy</a></p>
+        </div>
       </div>
-   </footer>
-   <!-- footer Section start -->
-</body>
-
+    </footer>
+    <!-- footer Section start -->
+  </body>
 </html>
